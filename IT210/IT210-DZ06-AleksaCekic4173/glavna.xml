@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href=""?>
+<studenti>
+    <student>
+            <ime> Milos </ime>
+            <prezime> Ljubinkovic </prezime>
+            <starost> 21 </starost>
+            <ispiti>
+                   <ocena> 9 </ocena>
+                   <sifra> IT210 </sifra>
+                   </predmet>
+                        <ocena> 10 </ocena>
+                        <sifra> IT101 </ocena>
+                   </predmet>
+            </ispiti>
+    </student>
+</studenti>

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252A;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #edf0f1;
+}
+
+.logo {
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 180;
+}
+.span {
+    font-weight: 750;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-links li a {
+    transition: all 0.3 ease 0s;
+}
+.nav-links li a:hover{
+    color: #d7195b;
+}
+button {
+    padding: 9px 25px;
+    background-color: rgba(215, 25, 91, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    background-color: rgba(215, 25, 91, 0.8);
+}
+main {
+    background-color: white;
+}
+.glavna-strana {
+    display: block;
+    position: relative;
+    padding: 60px 100px;
+    margin: 0 150px;
+}
+.naslov {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+.paragraf {
+    padding: 15px 250px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    position: relative;
+    right: 300px;
+    color: #d7195b;
+    float: left;
+    width: 70%;
+}
+#naslov-drugi {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    padding: 15px;
+}
+
+#naslov-drugi.linkovi {
+    width: 30%;
+    float: right;
+}
+
+.linkovi {
+    padding: 20px;
+    text-align: left;
+    align-items: center;
+    list-style: decimal;
+}
+.linkovi li a{
+    color: black;
+    list-style: outside;
+}
+
+.footer {
+    width: 100vw;
+    display: block;
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: #24252A;
+}
+.inner-footer {
+    display: block;
+    margin: 0 auto;
+    width: 1100px;
+    height: 100%;
+    align-items: center;
+}
+.container {
+    padding: 0 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: center;
+    align-items: baseline;
+    color: #d7195b;
+}
+.footer-third {
+    padding: 20px 50px;
+}
+.footer-third h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    text-align: center;
+    align-items: baseline;
+    color: #d7195b;
+}
+.footer-third ul{
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.footer-linkovi li {
+    color: #edf0f1;
+}
+
+.footer-linkovi li a {
+    transition: all 0.3 ease 0s;
+}
+
+.footer-linkovi li a:hover {
+    color: rgba(215, 25, 91, 0.8);
+}
+.paragraf-jedan {
+    padding: 15px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    position: relative;
+    padding: 50px 0;
+    color: #d7195b;
+    float: left;
+    width: 60%;
+}
+.wiki {
+    color: #d7195b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    float: right;
+    padding: 190px 0;
+}
+.nis-naslov {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    left: 20px;
+}
+.img {
+    float: right;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    margin: 70px 60px;
+}
+.dugme-srbija {
+    padding: 5% 15%;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+input {
+        
+  }
+.button {
+    padding: 9px 25px;
+    background-color: rgba(215, 25, 91, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 20px;
+}
+.button:hover {
+    background-color: rgba(215, 25, 91, 0.8);
+}

@@ -1,0 +1,28 @@
+input {
+    width: 300px;
+    height: 30px;
+    background-color: rgb(221, 219, 219);
+    border-radius: 30px;
+    border-color: powderblue;
+    padding: 5px;
+
+}
+.form-container{
+    padding: 5%;
+}
+
+#boxes .hover {
+    visibility: hidden;
+    position: absolute;
+    top: 30%;
+    /* left: 11%; */
+    margin-left: 11%;
+    transition:.1s;
+    z-index: 5;
+    color: #00a3e4;
+  }
+  
+  #boxes .box img:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+  }

@@ -1,0 +1,86 @@
+body {
+    background-color: #42455a;
+    font-family: sans-serif;
+  }
+.logo{
+    float: left;
+    position: absolute;
+    width: 150px;
+    top:2px;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+
+table, th{
+    border-collapse: collapse;
+    border: 2px solid white;
+    background-image: url(background.png);
+    color: white;
+    }
+    th, td{
+        padding: 15px;
+        text-align: center;
+    }
+    table{
+        margin-bottom: auto;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+     }
+     #input{
+        border: none;
+        background: transparent;
+         outline: none;
+         color: #fff;
+         font-size: 16px;
+         text-align: center;
+  }
+ .tabela1 input{
+    border: none;
+    background: transparent;
+     outline: none;
+     color: white;
+     font-size: 16px;
+     text-align: center;
+ }
+ 
+ #ukupno{
+     color: #19dafa;
+ }
+ 
+ h2{
+     color: black;
+     text-align: center;
+ }
+ #uslov{
+     text-align: center;
+     font-size: 30px;
+     background: black;
+     opacity: 0.9;
+     filter: alpha(opacity=50);
+     
+ }
+ #U{
+     color: #19dafa;
+ }
+#button{
+margin-left: 590px;
+ font-size: 17px;
+ position: absolute;
+ text-decoration: none;
+ color: #fff;
+ border: 2px solid transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(#42455a,#42455a),radial-gradient(circle at top left,#fd00da,#19d7f8);
+  background-origin: border-box;
+  background-clip: content-box,border-box;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+}
+#ocena{
+    font-size: 30px;
+}

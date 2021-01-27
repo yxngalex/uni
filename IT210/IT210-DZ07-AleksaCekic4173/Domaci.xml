@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restoran>
+    <meni>
+        <jelo>
+            <obrok>
+                <predjelo>Sir</predjelo>
+                <glavno_jelo>Piletina</glavno_jelo>
+                <dezert>Krem Palacinka</dezert>
+            </obrok>
+            <tri-glavna-sastojka>Sir, Meso, Krem</tri-glavna-sastojka>
+            <cena>2300</cena>
+            <velicina-porcije>Velika</velicina-porcije>
+        </jelo>
+        <jelo>
+            <obrok>
+                <predjelo>Cezar Salata</predjelo>
+                <glavno_jelo>Punjena Pljeskavica</glavno_jelo>
+                <dezert>Dzem Palacinka</dezert>
+            </obrok>
+            <tri-glavna-sastojka>Salata, Meso, Dzem</tri-glavna-sastojka>
+            <cena>1000</cena>
+            <velicina-porcije>Mala</velicina-porcije>
+        </jelo>
+        <jelo>
+            <obrok>
+                <predjelo>Supa od povrca</predjelo>
+                <glavno_jelo>Krompir</glavno_jelo>
+                <dezert>Jabuka</dezert>
+            </obrok>
+            <tri-glavna-sastojka>Supa, Krompir, Jabuka</tri-glavna-sastojka>
+            <cena>1500</cena>
+            <velicina-porcije>Srednja</velicina-porcije>
+        </jelo>
+        <jelo>
+            <obrok>
+                <predjelo>Pasteta</predjelo>
+                <glavno_jelo>Cevapi</glavno_jelo>
+                <dezert>Ekler</dezert>
+            </obrok>
+            <tri-glavna-sastojka>Pasteta, Meso, Ekler</tri-glavna-sastojka>
+            <cena>1500</cena>
+            <velicina-porcije>Srednja</velicina-porcije>
+        </jelo>
+        <jelo>
+            <obrok>
+                <predjelo>Krompir Corba</predjelo>
+                <glavno_jelo>Jagnjetina</glavno_jelo>
+                <dezert>Krem Palacinka</dezert>
+            </obrok>
+            <tri-glavna-sastojka>Corba, Meso, Krem</tri-glavna-sastojka>
+            <cena>2250</cena>
+            <velicina-porcije>Velika</velicina-porcije>
+        </jelo>
+    </meni>
+</restoran>

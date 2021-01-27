@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksa Cekic 4173</title>
+</head>
+<body style="background-color: lightcoral;">
+    <!--1-->
+    <form action="a.php" method="POST">
+        <label>Molim vas unesite vase ime i prezime</label><br><br>
+        <label>Ime : </label>
+        <input type="text" name="ime"><br><br>
+        <label>Prezime : </label>
+        <input type="text" name="prezime"><br><br>
+
+        <p>Izaberite vas pol : </p>
+        <input type="radio" name="pol" value="Musko" checked>
+        <label for="musko">Musko</label><br>
+        <input type="radio" name="pol" value="Zensko">
+        <label for="zensko">Zensko</label><br>
+        <input type="radio" name="pol" value="Drugo">
+        <label for="drugo">Drugo</label><br><br>
+
+        <p>Izaberite sta zelite u pljeskavicu : </p>
+        <input type="checkbox" name="prilog[]" value="Krastavac">
+        <label for="krastavac">Krastavac</label><br>
+        <input type="checkbox" name="prilog[]" value="Paradajz">
+        <label for="paradajz">Paradajz</label><br>
+        <input type="checkbox" name="prilog[]" value="Kecap">
+        <label for="kecap">Kecap</label><br>
+        <input type="checkbox" name="prilog[]" value="Kupus">
+        <label for="kupus">Kupus</label><br><br>
+ 
+        <p>Vas omiljeni sport</p>
+        <select name="nacionalnost">
+            <option value="Odbojka">Odbojka</option>
+            <option value="Fudbal">Fudbal</option>
+            <option value="Tenis">Tenis</option>
+            <option value="Bagminton">Bagminton</option>
+            <option value="Stoni">Stoni Tenis</option>
+        </select><br><br>
+
+        <!--2-->
+        <label>Unesite bilo koji broj</label>
+        <input type="number" name="number"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

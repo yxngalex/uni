@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/*---------Navigation--------*/
+#nav-bar{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar-brand img{
+  height: 70px;
+  padding-left: 0;
+}
+.navbar-nav li{
+
+  padding: 0 10px;
+
+}
+.navbar-nav li a{
+
+  float: rigth;
+  text-align: left;
+}
+#nav-bar ul li a:hover{
+  color: #00a3e4!important;
+}
+.navbar{
+    background: #fff;
+}
+.navbar-toggler{
+  border: none!important;
+}
+.nav-link{
+  color: #555!important;
+  font-weight: 600;
+  font-size: 16px;
+}
+/*-----Slider-----*/
+#slider{
+  width: 100%;
+
+}
+.carousel-caption{
+  top: 90%;
+  transform: translateY(-50%);
+  bottom: initial!important;
+}
+.carousel-caption h5{
+  color: #fff;
+  font-size: 42px;
+}
+.about-content img{
+  margin-left: 120%;
+  margin-top: -80%;
+}
+/*-----About---*/
+#about{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #555;
+}
+#about .btn{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.about-content{
+  padding-top: 20px;
+}
+/*-----Proizvodi-----*/
+.product-name{
+  color: #555;
+  padding-top: 20px;
+  padding-left: 10%;
+}
+/* .all-boxes{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  width: 200px;
+} */
+#boxes {
+  position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    justify-content: space-between;
+    background: #fff;
+    text-align: center;
+    padding: 3%;
+}
+
+#boxes .box img{
+  width: 350px;
+  height: 250px;
+  margin: 40px 0;
+}
+
+#boxes .hover {
+  visibility: hidden;
+  position: absolute;
+  top: 40%;
+  /* left: 11%; */
+  margin-left: 5%;
+  transition:.1s;
+  z-index: 5;
+  color: #00a3e4;
+}
+
+#boxes .box img:hover{
+  opacity: 0.5;
+  transition: 0.3s;
+}
+/* FOOTER */
+footer{
+  margin-top: 0px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    list-style-type: none;
+    padding: 10px;
+    background: #00a3e4;
+}
+.footerText a{
+  color: rgb(0, 0, 0);
+}

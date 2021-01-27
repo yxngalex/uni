@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Atom Enterprises | Pocetna</title>
+</head>
+
+<body>
+    <!------NavigationBar------>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="site logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="onama.html">O NAMA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="okopmaniji.html">O KOMPANIJI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontakt.html">KONTAKT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <!------SLIDER------>
+    <div id="slider">
+        <div id="headerSlider" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+                <li data-target="#headerSlider" data-slide-to="1"></li>
+                <li data-target="#headerSlider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="banner.jpeg" class="d-block w-100" alt="banner1">
+                    <div class="carousel-caption">
+                        <h5>Dobrodsli na Atom Enterprises</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="banner2.jpeg" class="d-block w-100" alt="banner2">
+                    <div class="carousel-caption">
+                        <h5>Nasi clanovi tima daju sve od sebe za vas</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="banner3.jpeg" class="d-block w-100" alt="banner3">
+                    <div class="carousel-caption">
+                        <h5>Rad na najnovijoj tehnologiji</h5>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-----About---->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-content">
+                        <h2>Dobro dosli na Atom Enterprises</h2>
+                        Atom Enterprises bavi se usavršavanjem AI tehnologije!
+                        AI tehnologija je skraćenica za Artificial Intelligence,
+                        što u prevodu znači Veštačka Inteligencija.
+                        Cilj istraživanja veštačke inteligencije je razvijanje programa (softvera),
+                        koji će računarima omogućiti da se ponašaju na način koji bi se mogao okarakterisati
+                        inteligentnim.
+                        Prva istraživanja se vežu za same korijene računarstva. Ideja o stvaranju mašina koje će biti
+                        sposobne da obavljaju različite zadatke inteligentno,
+                        bila je centralna preokupacija naučnika računarstva koji su se opredijelili za
+                        istraživanje veštačke inteligencije, tokom cele druge polovine 20. veka.
+                        Savremena istraživanja u veštačkoj inteligenciji su orijentisana na ekspertske i prevodilačke
+                        sisteme u ograničenim domenima, prepoznavanje prirodnog govora i pisanog teksta, automatske
+                        dokazivače teorema,
+                        kao i konstantno interesovanje za stvaranje generalno inteligentnih autonomnih agenata.
+                        Mi smo tu, da obezbedimo bolju budućnost za vas.
+                    </div>
+                    <a href="okopmaniji.html"><button type="button" class="btn btn-primary">Pročitaj više</button></a>
+                </div>
+                <div class="col-md-6">
+                    <img src="computer.png" alt="AI">
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--Proizvodi-->
+    <div class="product-name">
+        <h2>Neki nasi proizvodi</h2>
+    </div>
+    <section id="boxes">
+        <!-- <div class="container"> -->
+
+        <!-- <div class="all-boxes"> -->
+        <div class="box">
+            <img id="slika1" src="amazonalexa.jpeg" alt="amazonalexa" onmouseover="show1()" onmouseout="hide1()">
+            <div class="first-text">
+                <h1>Atom Alexa</h1>
+                <p>NAS NAJNOVIJI PROIZVOD</p>
+            </div>
+            <div class="hover" id="over1">
+                <h3>AI glas koji slusa vase komande</h3>
+            </div>
+        </div>
+        <div class="box">
+            <img id="slika2" src="amazondot.jpeg" alt="amazondot" onmouseover="show2()" onmouseout="hide2()">
+            <div class="second-text">
+                <h1>Atom Alexa Mini</h1>
+                <p>NAJNOVIJI ATOM ALEXA MINI</p>
+            </div>
+            <div class="hover" id="over2">
+                <h3>Mini verzija Atom Alexa</h3>
+            </div>
+        </div>
+        <div class="box">
+            <img id="slika3" src="processor.jpeg" alt="amazondot" onmouseover="show3()" onmouseout="hide3()">
+            <div class="third-text">
+                <h1>Procesor I20 12600Ti</h1>
+                <p>NAJBOLJI NAJNOVIJI PROCESORI NA TRZISTU</p>
+            </div>
+            <div class="hover" id="over3">
+                <h3>U saradnji sa intel-om dajemo vam:</h3>
+            </div>
+        </div>
+
+        <!-- </div> -->
+        <!-- </div> -->
+    </section>
+    <!--Footer-->
+    <footer>
+        <div class="footerText">
+            <ul>
+                <li class="current">
+                    <a href="index.html">Pocetna</a>
+                </li>
+                <li>
+                    <a href="onama.html">O nama</a>
+                </li>
+                <li>
+                    <a href="okopmaniji.html">O kompaniji</a>
+                </li>
+                <li>
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+                <li>
+                    <a href="index.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <p>Atom Enterprises, Copyright @ 2020.All rights reserved.</p>
+    </footer>
+  </body>
+</html>

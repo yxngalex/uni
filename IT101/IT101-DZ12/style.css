@@ -1,0 +1,43 @@
+body {
+    background-color: #68a4ff;
+   }
+/*----Navigation bar-----*/
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+.navbar-brand img{
+    height: 0px;
+    padding-left: 0;
+  }
+.navbar-nav li{
+    padding: 0 20px;
+  }
+.navbar-nav li a{
+    float: right;
+    text-align: left;
+  }
+.navbar{
+      background: #fff;
+  }
+.navbar-toggler{
+    border: none!important;
+  }
+.nav-link{
+    color: #555!important;
+    font-weight: 600;
+    font-size: 16px;
+  }
+/*-----Tekst-----*/
+.about-container{
+    padding-top: 5%;
+}
+.about-container h3{
+    padding-top: 4%;
+}
+.container img{
+    position:absolute;
+    margin-left: 53%;
+    margin-top: -15%;   
+}
