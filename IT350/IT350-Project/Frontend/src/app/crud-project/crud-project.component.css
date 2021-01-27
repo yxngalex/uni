@@ -1,0 +1,91 @@
+table {
+  width: 80%;
+  height: 80%;
+  margin-left: 10%;
+  margin-top: 1vw;
+  margin-right: auto;
+}
+
+td {
+  padding: 0 !important;
+  text-align: center !important;
+  width: 10%;
+}
+
+th {
+  text-align: center !important;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #303030;
+  user-select: none;
+}
+
+.view-button {
+  margin-left: 0.5vw;
+  cursor: pointer;
+  color: #303030;
+}
+
+.view-button:hover {
+  color: #ff3c00;
+  transition: color 0.2s linear;
+}
+
+.edit-button {
+  margin-left: 0.5vw;
+  cursor: pointer;
+  color: #303030;
+}
+
+.edit-button:hover {
+  color: #ff3c00;
+  transition: color 0.2s linear;
+}
+
+.delete-button {
+  margin-left: 0.5vw;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  color: #ff0000;
+  transition: color 0.2s linear;
+}
+
+.searchField {
+  margin-left: 79%;
+}
+
+.add-button {
+  float: right;
+  margin-top: 1vw;
+  margin-right: 11%;
+}
+
+input {
+  font-size: 14px;
+  width: 50%;
+}
+
+mat-paginator {
+  margin-right: 10%;
+}
+
+.header {
+  margin-top: 2vw;
+  margin-left: 10%;
+  margin-bottom: 1.5vw;
+}
+
+.header > h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.header > p {
+  margin-top: 1vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}

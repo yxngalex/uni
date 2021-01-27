@@ -1,0 +1,185 @@
+drop table if exists ASISTENT;
+
+drop table if exists DEMONSTRATOR;
+
+drop table if exists ISPIT;
+
+drop table if exists KATEDRA;
+
+drop table if exists NASTAVNIK;
+
+drop table if exists POLAGAO;
+
+drop table if exists PREDMET;
+
+drop table if exists PREDMETNASTAVNIK;
+
+drop table if exists PROFESOR;
+
+drop table if exists STUDENT;
+
+/*==============================================================*/
+/* Table: ASISTENT                                              */
+/*==============================================================*/
+create table ASISTENT
+(
+   ID_NASTAVNIK         int not null,
+   ID_PREDMET_NASTAVNIK int not null,
+   IME                  text,
+   PREZIME              text,
+   PREDMET              text,
+   ODELJENJE            text,
+   DATUM_RODJENJA       date,
+   primary key (ID_NASTAVNIK)
+);
+
+/*==============================================================*/
+/* Table: DEMONSTRATOR                                          */
+/*==============================================================*/
+create table DEMONSTRATOR
+(
+   ID_NASTAVNIK         int not null,
+   ID_PREDMET_NASTAVNIK int not null,
+   IME                  text,
+   PREZIME              text,
+   PREDMET              text,
+   ODELJENJE            text,
+   DATUM_RODJENJA       date,
+   primary key (ID_NASTAVNIK)
+);
+
+/*==============================================================*/
+/* Table: ISPIT                                                 */
+/*==============================================================*/
+create table ISPIT
+(
+   ID_ISPITA            int not null,
+   VREME                datetime,
+   UCIONICA             text,
+   primary key (ID_ISPITA)
+);
+
+/*==============================================================*/
+/* Table: KATEDRA                                               */
+/*==============================================================*/
+create table KATEDRA
+(
+   ID_NASTAVNIK         int not null,
+   ID_KATEDRE           int,
+   NAZIV                text
+);
+
+/*==============================================================*/
+/* Table: NASTAVNIK                                             */
+/*==============================================================*/
+create table NASTAVNIK
+(
+   ID_NASTAVNIK         int not null,
+   ID_PREDMET_NASTAVNIK int not null,
+   IME                  text,
+   PREZIME              text,
+   PREDMET              text,
+   ODELJENJE            text,
+   DATUM_RODJENJA       date,
+   primary key (ID_NASTAVNIK)
+);
+
+/*==============================================================*/
+/* Table: POLAGAO                                               */
+/*==============================================================*/
+create table POLAGAO
+(
+   ID_POLAGANJA         int not null,
+   ID_STUDENTA          int not null,
+   ID_ISPITA            int not null,
+   ID_PREDMETA          int not null,
+   OCENA                numeric(8,0),
+   BROJ_POENA           int,
+   primary key (ID_POLAGANJA)
+);
+
+/*==============================================================*/
+/* Table: PREDMET                                               */
+/*==============================================================*/
+create table PREDMET
+(
+   ID_PREDMETA          int not null,
+   ID_PREDMET_NASTAVNIK int not null,
+   NAZIV                text,
+   SIFRA                text,
+   primary key (ID_PREDMETA)
+);
+
+/*==============================================================*/
+/* Table: PREDMETNASTAVNIK                                      */
+/*==============================================================*/
+create table PREDMETNASTAVNIK
+(
+   ID_PREDMET_NASTAVNIK int not null,
+   SEMESTAR             text,
+   SKOLSKA_GODINA       date,
+   primary key (ID_PREDMET_NASTAVNIK)
+);
+
+/*==============================================================*/
+/* Table: PROFESOR                                              */
+/*==============================================================*/
+create table PROFESOR
+(
+   ID_NASTAVNIK         int not null,
+   ID_PREDMET_NASTAVNIK int not null,
+   IME                  text,
+   PREZIME              text,
+   PREDMET              text,
+   ODELJENJE            text,
+   DATUM_RODJENJA       date,
+   primary key (ID_NASTAVNIK)
+);
+
+/*==============================================================*/
+/* Table: STUDENT                                               */
+/*==============================================================*/
+create table STUDENT
+(
+   ID_STUDENTA          int not null,
+   IME                  text,
+   PREZIME              text,
+   BROJ_INDEKSA         int,
+   JMBG                 bigint,
+   DATUM_RODJENJA       date,
+   POL                  text,
+   primary key (ID_STUDENTA)
+);
+
+alter table ASISTENT add constraint FK_NASTAVNICI2 foreign key (ID_NASTAVNIK)
+      references NASTAVNIK (ID_NASTAVNIK) on delete restrict on update restrict;
+
+alter table DEMONSTRATOR add constraint FK_NASTAVNICI foreign key (ID_NASTAVNIK)
+      references NASTAVNIK (ID_NASTAVNIK) on delete restrict on update restrict;
+
+alter table KATEDRA add constraint FK_SEF_KATEDRE2 foreign key (ID_NASTAVNIK)
+      references NASTAVNIK (ID_NASTAVNIK) on delete restrict on update restrict;
+
+alter table NASTAVNIK add constraint FK_PREDAJE foreign key (ID_PREDMET_NASTAVNIK)
+      references PREDMETNASTAVNIK (ID_PREDMET_NASTAVNIK) on delete restrict on update restrict;
+
+alter table NASTAVNIK add constraint FK_PRIPADA foreign key ()
+      references KATEDRA on delete restrict on update restrict;
+
+alter table NASTAVNIK add constraint FK_SEF_KATEDRE foreign key ()
+      references KATEDRA on delete restrict on update restrict;
+
+alter table POLAGAO add constraint FK_POLAGANJE_ISPITA foreign key (ID_ISPITA)
+      references ISPIT (ID_ISPITA) on delete restrict on update restrict;
+
+alter table POLAGAO add constraint FK_POLAZE foreign key (ID_STUDENTA)
+      references STUDENT (ID_STUDENTA) on delete restrict on update restrict;
+
+alter table POLAGAO add constraint FK_VEZA_POLAGANJA_ISPITA foreign key (ID_PREDMETA)
+      references PREDMET (ID_PREDMETA) on delete restrict on update restrict;
+
+alter table PREDMET add constraint FK_DRZI foreign key (ID_PREDMET_NASTAVNIK)
+      references PREDMETNASTAVNIK (ID_PREDMET_NASTAVNIK) on delete restrict on update restrict;
+
+alter table PROFESOR add constraint FK_NASTAVNICI3 foreign key (ID_NASTAVNIK)
+      references NASTAVNIK (ID_NASTAVNIK) on delete restrict on update restrict;
