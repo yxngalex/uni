@@ -1,0 +1,7 @@
+CREATE TABLE `it210dz12`.`korisnici` (
+ VARCHAR(255) NOT NULL ,
+ `email` TEXT NOT NULL ,
+ `password` VARCHAR(255) NOT NULL )
+ ENGINE = InnoDB;
+
+ ALTER TABLE `korisnici` ADD `id` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`);

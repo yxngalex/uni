@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>IT101-DZ12</title>
+    <script src="JavaScript.js"></script>
+</head>
+
+<body>
+    <!---Navigation bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">IT101 DZ 12</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="index.html">Pocetna </a>
+                <a class="nav-item nav-link" href="poeni.html">Poeni</a>
+                <a class="nav-item nav-link" href="it101.html">IT101</a>
+            </div>
+        </div>
+    </nav>
+    <!---Provera poena-->
+    <h1>Aleksa Cekic 4173</h1>
+    <h2>IT101 - Osnove informacionih tehnologija</h2>
+    <table class="tabela1" border="1">
+        <tr>
+            <th style=>IT101 </th>
+            <th>Domaci</th>
+            <th>Test</th>
+            <th>Projekat</th>
+            <th>Negativni poeni</th>
+            <th>Zalaganje</th>
+            <th id="ukupno">TABELA SA POENIMA</th>
+
+        <tr>
+            <th>1</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D1"></th>
+            <th rowspan="3"><input class="input" type="text" placeholder="Unesite poene" id="T1"></th>
+            <th rowspan="15"><input class="input" type="text" placeholder="Unesite poene" id="P"></th>
+            <th rowspan="15"><input type="text" placeholder="Unesite poene" id="N"></th>
+            <th rowspan="15"> <input type="text" id="ispit" placeholder="Unesite poene"> </th>
+            <th rowspan="15" id="U"></th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D2"></th>
+
+
+        </tr>
+        <tr>
+            <th>3</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D3"></th>
+
+
+        </tr>
+        <tr>
+            <th>4</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D4"></th>
+            <th rowspan="3"><input class="input" type="text" placeholder="Unesite poene" id="T2"></th>
+
+
+
+        </tr>
+        <tr>
+            <th>5</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D5"></th>
+
+
+        </tr>
+        <tr>
+            <th>6</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D6"></th>
+
+
+        </tr>
+        <tr>
+            <th>7</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D7"></th>
+            <th rowspan="3"><input class="input" type="text" placeholder="Unesite poene" id="T3"></th>
+
+
+        </tr>
+        <tr>
+            <th>8</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D8"></th>
+
+
+        </tr>
+        <tr>
+            <th>9</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D9"></th>
+
+
+        </tr>
+        <tr>
+            <th>10</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D10"></th>
+            <th rowspan="3"><input class="input" type="text" placeholder="Unesite poene" id="T4"></th>
+
+
+        </tr>
+        <tr>
+            <th>11</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D11"></th>
+
+
+        </tr>
+        <tr>
+            <th>12</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D12"></th>
+
+
+        </tr>
+        <tr>
+            <th>13</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D13"></th>
+            <th rowspan="3"><input class="input" type="text" placeholder="Unesite poene" id="T5"></th>
+
+
+        </tr>
+        <tr>
+            <th>14</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D14"></th>
+
+
+        </tr>
+        <tr>
+            <th>15</th>
+            <th><input class="input" type="text" placeholder="Unesite poene" id="D15"></th>
+
+
+        </tr>
+
+        </tr>
+    </table> <br>
+    <input id="button" type='button' onclick='rezultat()' value='Unesi' />
+    <p id="unesi"></p>
+</body>
+
+</html>

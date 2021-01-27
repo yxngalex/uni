@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Atom Enterprises | Kontakt</title>
+</head>
+
+<body>
+    <!------NavigationBar------>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="site logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">POCETNA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="onama.html">O NAMA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="okopmaniji.html">O KOMPANIJI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontakt.html">KONTAKT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <!-- MAIN -->
+    <section id="main">
+        <div class="container">
+            <h2>Kontakt:</h2>
+            <p>Ukoliko imate bilo kakavu primedbu, napisite nam dole:</p>
+            <div id="form-sample">
+                <form name="myForm" action="/submit.php" onsubmit="return validateForm()" method="post">
+                    Unesite vase ime:
+                    <input type="text" placeholder="Unesite vase ime" name="Name" required><br><br>
+                    Unesite vase prezime:
+                    <input type="text" placeholder="Unesite vase prezime" id="prezime" required name="Lastname">
+                    <br><br>
+                    Unesite naslov teme:
+                    <br>
+                    <input type="text" placeholder="Unesite naslov" name="Naslov" required>
+                    <br><br>
+                    Vas tekst ide ovde:
+                    <textarea rows="15" cols="150" required placeholder="Unesite vas tekst ovde!" maxlength="20"
+                        minlength="5"></textarea>
+                    <br><br>
+                    Izaberite vas tip poruke:
+                    <select required name="Select">
+                        <option value="Pomoc">Pomoc</option>
+                        <option value="Primedba">Primedba</option>
+                        <option value="Prijava">Prijava</option>
+                    </select>
+                    <br><br>
+                    Molimo vas unesite vas broj telefona:<br>
+                    <input type="number" placeholder="Unesite broj telefona!" id="broj-telefona" step="1" name="Number">
+                    <br><br>
+                    <p><input type="submit" value="Send" name="Submit">
+                        <input type="reset" value="Reset" name="Reset">
+                    </p>
+                    <br><br>
+                </form>
+            </div>
+            <script src="script.js"></script>
+        </div>
+    </section>
+    <footer>
+        <div class="footerText">
+            <ul>
+                <li class="current">
+                    <a href="index.html">Pocetna</a>
+                </li>
+                <li>
+                    <a href="onama.html">O nama</a>
+                </li>
+                <li>
+                    <a href="okopmaniji.html">O kompaniji</a>
+                </li>
+                <li>
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+                <li>
+                    <a href="index.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <p>Atom Enterprises, Copyright @ 2020.All rights reserved.</p>
+    </footer>
+  </body>
+</html>

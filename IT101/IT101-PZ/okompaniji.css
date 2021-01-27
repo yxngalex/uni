@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  /*---------Navigation--------*/
+  #nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .navbar-brand img{
+    height: 70px;
+    padding-left: 0;
+  }
+  .navbar-nav li{
+  
+    padding: 0 10px;
+  
+  }
+  .navbar-nav li a{
+  
+    float: rigth;
+    text-align: left;
+  }
+  #nav-bar ul li a:hover{
+    color: #00a3e4!important;
+  }
+  .navbar{
+      background: #fff;
+  }
+  .navbar-toggler{
+    border: none!important;
+  }
+  .nav-link{
+    color: #555!important;
+    font-weight: 600;
+    font-size: 16px;
+  }
+   /* Set the size of the div element that contains the map */
+   #map {
+    padding: 5%;
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }
+
+   .mapouter {
+    text-align: right;
+    height: 500px;
+    width: 2160px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 2160px;
+}
+footer{
+  margin-top: 0px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    list-style-type: none;
+    padding: 10px;
+    background: #00a3e4;
+}
+.footerText a{
+  color: rgb(0, 0, 0);
+}

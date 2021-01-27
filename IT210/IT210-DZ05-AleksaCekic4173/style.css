@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.vrati-se {
+    align-items: center;
+    padding: 0 15px;
+    margin: auto;
+}

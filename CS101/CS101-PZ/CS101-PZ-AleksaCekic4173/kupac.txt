@@ -1,0 +1,4 @@
+Ime Kupca: Aleksa
+Prezime Kupca: Cekic
+Jmbg Kupca: 123456789
+Kusur: 799.5

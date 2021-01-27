@@ -1,0 +1,23 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+#email,
+select {
+	color: #b2b1b1;
+	margin-bottom: 5px;
+}
+#container,
+select{
+	width: 250px;
+	
+}
+.metropolitan{
+    width:45%;
+    position: absolute;
+    left: 65%;
+    top: 45% ;
+}
+.metropolitan img{
+    width: 75%;
+    
+}

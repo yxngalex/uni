@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pocetna | Aleksa Cekic 4173 | IT210 Domaci Zadatak 04</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+       <!--Navbar-->
+       <header>
+            <a class="logo"href="index.html">IT<span class="span">210</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Pocetna</a></li>
+                    <li><a href="drugastrana.html">Opis Nisa</a></li>
+                    <li><a href="trecastrana.html">Opis Srbije</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="contact.html"><button>Contact</button></a>
+       </header>
+       <main>
+            <article class="glavna-strana">
+                <h1 class="naslov">Kontaktiraj nas:</h1><br><br>
+                <form action="action-post.html" method="GET">
+                    <label>Unesi ime i prezime:</label>
+                    <input type="text" placeholder="Ime"> 
+                    <input type="text" placeholder="Prezime"><br><br>
+                    <label>Unesi email adresu:</label>
+                    <input type="email" placeholder="E-mail"><br><br>
+                    <label>Izaberi zasto nas kontaktiras:</label>
+                    <select id="izaberi">
+                        <option value="zaldba">Zaldba</option>
+                        <option value="pomoc">Pomoc</option>
+                        <option value="drugo">Drugo</option>
+                    </select><br><br>
+                    <label>Subject: </label>
+                    <input type="text"><br><br><br>
+                    <label>Poruka: </label><br>
+                    <textarea rows="30" cols="200" minlength="5" maxlength="500" placeholder="Napisi poruku (minimalno 5 reci, maksimalno 500)"></textarea><br><br><br>
+                    <label>Posalji: </label>
+                    <input type="submit" class="button"><br><br>
+                    <label>Ponovi: </label>
+                    <input type="reset" class="button">
+                </form>
+            </article>
+       </main>
+       <div class="footer">
+        <div class="inner-footer">
+            <div class="container">
+                <h1>Domaci zadatak uradio Aleksa Cekic 4173 @ Univerzitet Metropolitan</h2>
+            </div>
+            <div class="footer-third">
+                <h1>Pogledajte nase druge stranice:</h1>
+                <ul class="footer-linkovi">
+                    <li><a href="index.html">Link za Pocetnu</a></li>
+                    <li><a href="drugastrana.html">Link za opis nisa</a></li>
+                    <li><a href="trecastrana.html">Link za nesto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

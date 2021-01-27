@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>IT101-DZ08-AleksaCekic4173</title>
+	<link rel="stylesheet" type="text/css" href="unos_style.css">
+</head>
+
+<body style= "background-color:powderblue;"> 	
+	<form enctype="multipart/form-data" method="post" action="">
+		<div id = "container">
+			Unesite vasu email adresu: 
+			<input id = "email" type = "text" name = "vasa email adresa" value = "Vasa email adresa" > </br>
+			Unesite vas password: 
+			<input id = "password" type = "password" name = "Vas password" > </br>
+		</div>
+		Odaberite predmet: 
+		<select name = "predmeti">
+			<option value = "">
+			<option value = "IT101"> IT101 
+		</select> </br>
+		Da li ste online ili tradicionalni student? </br>
+			Online <input type="radio" id = "radio1" name="student" value="Online" checked>
+			Tradicionalni <input type = "radio" id = "radio2" name = "student" value = "Tradicionalni" > </br>
+		Predispitne obaveze: </br>
+			<input type = "checkbox" id = "domaci" name = "Domaci" value = "yes" >Domaci </br>
+			<input type = "checkbox" id = "projekat" name = "Projekat" value = "yes" >Projekat </br>
+			<input type = "checkbox" id = "testovi" name = "Testovi" value = "yes" >Testovi </br>
+		Broj poena: 
+			<input type = "text" name = "poeni" > </br>
+		Domaci zadatak:<br>
+			<input type = "file" name = "domaci" > </br>
+			<div id = "buttons">
+				<input type="submit" value="OK">
+				<input type="reset" value="Ponovo!">
+			</div>
+	 </form><br><br>
+     <a href="pregled.html">Pogledaj Tabelu</a><br>
+     <div class= "metropolitan">
+     <img src="metropolitan.png" alt="Metropolitan Fakultet Logo">
+    </div>
+    </body>
+</html>

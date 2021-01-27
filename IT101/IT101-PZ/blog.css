@@ -1,0 +1,14 @@
+#main-col ul li img{
+    
+    padding: 3%;
+    width: 146px;
+    height: 146px;
+    float: left;
+}
+#main-col ul{
+    list-style-type: none;
+}
+
+#main-col a{
+    float: right;
+}
