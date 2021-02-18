@@ -14,7 +14,7 @@ Each branch represents a year, and each folder represents a subject with their c
 
 ### Second semester
 
-1. **CS102** - Abstract data types and Objects
+1. **CS102** - Abstract Data Types and Objects
 2. **IT210** - IT systems
 3. **CS115** - Discrete Mathematics Structures
 4. **NT112** - English 2
