@@ -63,11 +63,11 @@ public class CheckSeasons {
 
 ## 2. Navesti vrste komentara i načine na koje je moguće komentarisati programski kod.
 
-    * Generalni komentar na pocetku samog fajla. On opisuje svrhu fajla. Izmedju ostalog taj deo komentara moze da sadrzi informacije o autoru zajedno sa kontakt informacijama (npr. email) ili na primer informacije o licenci izvornog koda koji zadrzi.
+- Generalni komentar na pocetku samog fajla. On opisuje svrhu fajla. Izmedju ostalog taj deo komentara moze da sadrzi informacije o autoru zajedno sa kontakt informacijama (npr. email) ili na primer informacije o licenci izvornog koda koji zadrzi.
 
-    * Komentarisanje metoda i funkcija. Komentari ovde sluze da pojasne sta funkcija ili metoda radi i opciono opisuje povratni tip podataka kao i sve parametre koje funcija prima kao argumente.
+- Komentarisanje metoda i funkcija. Komentari ovde sluze da pojasne sta funkcija ili metoda radi i opciono opisuje povratni tip podataka kao i sve parametre koje funcija prima kao argumente.
 
-    * Komentarisanje individualnih linija. Pomaze da objasni rezultat odredjene linije. To moze da bude korisno u slucajevima gde se mora isposovati odredjena procedura izvrsavnja instrukcija ili na primer kod odredjenih optimizacija gde moze doci do necitljivog koda. Slican primer je i komentarisanje klasa ili sturktura.
+- Komentarisanje individualnih linija. Pomaze da objasni rezultat odredjene linije. To moze da bude korisno u slucajevima gde se mora isposovati odredjena procedura izvrsavnja instrukcija ili na primer kod odredjenih optimizacija gde moze doci do necitljivog koda. Slican primer je i komentarisanje klasa ili sturktura.
 
 ## 3. Prikazati način na koji se vrši komentarisanje programskog koda unutar aplikacije
 
