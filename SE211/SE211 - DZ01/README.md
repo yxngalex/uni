@@ -4,61 +4,254 @@
 
 ## 1. Prikazati primer dobro formatirane klase unutar aplikacije.
 
-Primer je uzet sa individualnih vežbi.
+Za ovaj primer uzeta su dva objekta biblioteke i knjige.
+
+### Klasa Knjiga
 
 ```java
-package seasons;
-
-import java.util.Scanner;
+import java.util.Date;
 
 /**
- *  This CheckSeasons class checks which season it is based on month and day from standard input.
+ * This Book class represents a real book. It has these attributes to describe this book.
  *
- *  @author Asus
- *  @version 1.0
- *  @since 2020-02-20
+ * @author Aleksa
+ * @version 1.0
+ * @since 2020-02-20
  */
-public class CheckSeasons {
+
+public class Book {
 
     /**
-     *
-     * @param args Unused
+     * name of a book
      */
-    public static void main(String[] args) {
-        //Initializing Scanner to let user choose month and day from standard input.
-        Scanner scan = new Scanner(System.in);
-        int month = scan.nextInt();
-        int day = scan.nextInt();
+    private String name;
 
-        //Prints in standard output.
-        System.out.println(checkSeasons(month, day));
+    /**
+     * name of an author
+     */
+    private String author;
+
+    /**
+     * id of a book
+     */
+    private Integer id;
+
+    /**
+     * date when this book was released
+     */
+    private Date releaseDate;
+
+
+    /**
+     * This is a default constructor to initialize book object.
+     */
+    public Book() {
     }
 
     /**
-     * This function checks which seasons it is based on month and day.
+     * This is a constructor to initialize book object with params.
      *
-     * @param month Integer value which represents a month.
-     * @param day Integer value which represents a day.
-     * @return result - String value where season is stored.
+     * @param name
+     * @param author
+     * @param id
+     * @param releaseDate
      */
-    public static String checkSeasons(int month, int day) {
-        //Declare and initialize result variable.
-        String result = "";
+    public Book(String name, String author, Integer id, Date releaseDate) {
+        this.name = name;
+        this.author = author;
+        this.id = id;
+        this.releaseDate = releaseDate;
+    }
 
-        //Main logic for checking seasons.
-        if ((month == 12 && day >= 16 && day <= 31) || (month == 1 && day >= 1 && day <= 31) || (month == 2 && day >= 1 && day <= 28) || (month == 3 && day >= 1 && day <= 15)) {
-            result = "Winter";
-        } else if ((month == 3 && day >= 16 && day <= 31) || (month == 4 && day >= 1 && day <= 30) || (month == 5 && day >= 1 && day <= 31) || (month == 6 && day >= 1 && day <= 15)) {
-            result = ("Spring");
-        } else if ((month == 6 && day >= 16 && day <= 30) || (month == 7 && day >= 1 && day <= 31) || (month == 8 && day >= 1 && day <= 31) || (month == 9 && day >= 1 && day <= 15)) {
-            result = ("Summer");
-        } else if ((month == 9 && day >= 16 && day <= 30) || (month == 10 && day >= 1 && day <= 31) || (month == 11 && day >= 1 && day <= 30) || (month == 12 && day >= 1 && day <= 15)) {
-            result = ("Fall");
-        }
-        //Return result variable.
-        return result;
+    /**
+     * get book name
+     * @return book name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * set book name
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * get book author
+     * @return book author
+     */
+    public String getAuthor() {
+        return author;
+    }
+
+    /**
+     * set book author
+     * @param author
+     */
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    /**
+     * get book id
+     * @return id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * set book id
+     * @param id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    /**
+     * get release date
+     * @return releaseDate
+     */
+    public Date getReleaseDate() {
+        return releaseDate;
+    }
+
+    /**
+     * set release date
+     * @param releaseDate
+     */
+    public void setReleaseDate(Date releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
+    /**
+     * return back this object with attributes as string
+     * @return Book
+     */
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", id=" + id +
+                ", releaseDate=" + releaseDate +
+                '}';
     }
 }
+
+```
+
+### Klasa Biblioteka
+
+```java
+import java.util.List;
+
+/**
+ * This Library class represents a library with books stored in it. Attributes defined inside this class represents a real life library.
+ *
+ * @author Aleksa
+ * @version 1.0
+ * @since 2020-02-20
+ */
+public class Library {
+    /**
+     * list of books inside library
+     */
+    private List<Book> bookList;
+    /**
+     * name of a library
+     */
+    private String nameOfLibrary;
+    /**
+     * library address
+     */
+    private String address;
+
+
+    /**
+     * default constructor
+     */
+    public Library() {
+    }
+
+    /**
+     * This is a constructor to initialize library object with params.
+     *
+     * @param bookList
+     * @param nameOfLibrary
+     * @param address
+     */
+    public Library(List<Book> bookList, String nameOfLibrary, String address) {
+        this.bookList = bookList;
+        this.nameOfLibrary = nameOfLibrary;
+        this.address = address;
+    }
+
+    /**
+     * get books as a list
+     * @return bookList
+     */
+    public List<Book> getBookList() {
+        return bookList;
+    }
+
+    /**
+     * set books
+     * @param bookList
+     */
+    public void setBookList(List<Book> bookList) {
+        this.bookList = bookList;
+    }
+
+    /**
+     * get name of library
+     * @return name
+     */
+    public String getNameOfLibrary() {
+        return nameOfLibrary;
+    }
+
+    /**
+     * set name of library
+     * @param nameOfLibrary
+     */
+    public void setNameOfLibrary(String nameOfLibrary) {
+        this.nameOfLibrary = nameOfLibrary;
+    }
+
+    /**
+     * get library address
+     * @return address
+     */
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * set address
+     * @param address
+     */
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    /**
+     * Return library object as to String
+     * @return Library
+     */
+    @Override
+    public String toString() {
+        return "Library{" +
+                "bookList=" + bookList +
+                ", nameOfLibrary='" + nameOfLibrary + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
+}
+
 ```
 
 ## 2. Navesti vrste komentara i načine na koje je moguće komentarisati programski kod.
