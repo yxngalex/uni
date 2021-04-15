@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewKorisnikTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewKorisnikLabel_idKorisnika}"/>
+                    <h:outputText value="#{korisnikController.selected.idKorisnika}" title="#{bundle.ViewKorisnikTitle_idKorisnika}"/>
+                    <h:outputText value="#{bundle.ViewKorisnikLabel_ime}"/>
+                    <h:outputText value="#{korisnikController.selected.ime}" title="#{bundle.ViewKorisnikTitle_ime}"/>
+                    <h:outputText value="#{bundle.ViewKorisnikLabel_prezime}"/>
+                    <h:outputText value="#{korisnikController.selected.prezime}" title="#{bundle.ViewKorisnikTitle_prezime}"/>
+                    <h:outputText value="#{bundle.ViewKorisnikLabel_godine}"/>
+                    <h:outputText value="#{korisnikController.selected.godine}" title="#{bundle.ViewKorisnikTitle_godine}"/>
+                    <h:outputText value="#{bundle.ViewKorisnikLabel_createdDate}"/>
+                    <h:outputText value="#{korisnikController.selected.createdDate}" title="#{bundle.ViewKorisnikTitle_createdDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewKorisnikLabel_lastModifiedDate}"/>
+                    <h:outputText value="#{korisnikController.selected.lastModifiedDate}" title="#{bundle.ViewKorisnikTitle_lastModifiedDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewKorisnikLabel_lastModifiedBy}"/>
+                    <h:outputText value="#{korisnikController.selected.lastModifiedBy}" title="#{bundle.ViewKorisnikTitle_lastModifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewKorisnikLabel_recordStatus}"/>
+                    <h:outputText value="#{korisnikController.selected.recordStatus}" title="#{bundle.ViewKorisnikTitle_recordStatus}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{korisnikController.destroyAndView}" value="#{bundle.ViewKorisnikDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewKorisnikEditLink}"/>
+                <br />
+                <h:commandLink action="#{korisnikController.prepareCreate}" value="#{bundle.ViewKorisnikCreateLink}" />
+                <br />
+                <h:commandLink action="#{korisnikController.prepareList}" value="#{bundle.ViewKorisnikShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewKorisnikIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

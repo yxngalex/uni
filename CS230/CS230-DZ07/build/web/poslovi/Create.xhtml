@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreatePosloviTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_idPosla}" for="idPosla" />
+                    <h:inputText id="idPosla" value="#{posloviController.selected.idPosla}" title="#{bundle.CreatePosloviTitle_idPosla}" required="true" requiredMessage="#{bundle.CreatePosloviRequiredMessage_idPosla}"/>
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_naziv}" for="naziv" />
+                    <h:inputText id="naziv" value="#{posloviController.selected.naziv}" title="#{bundle.CreatePosloviTitle_naziv}" />
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_opis}" for="opis" />
+                    <h:inputText id="opis" value="#{posloviController.selected.opis}" title="#{bundle.CreatePosloviTitle_opis}" />
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_maksBudzet}" for="maksBudzet" />
+                    <h:inputText id="maksBudzet" value="#{posloviController.selected.maksBudzet}" title="#{bundle.CreatePosloviTitle_maksBudzet}" />
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_duzinaTrajanja}" for="duzinaTrajanja" />
+                    <h:inputText id="duzinaTrajanja" value="#{posloviController.selected.duzinaTrajanja}" title="#{bundle.CreatePosloviTitle_duzinaTrajanja}" />
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_brojPotrebnihRadnika}" for="brojPotrebnihRadnika" />
+                    <h:inputText id="brojPotrebnihRadnika" value="#{posloviController.selected.brojPotrebnihRadnika}" title="#{bundle.CreatePosloviTitle_brojPotrebnihRadnika}" />
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_kljucnaRec}" for="kljucnaRec" />
+                    <h:inputText id="kljucnaRec" value="#{posloviController.selected.kljucnaRec}" title="#{bundle.CreatePosloviTitle_kljucnaRec}" />
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_createdDate}" for="createdDate" />
+                    <h:inputText id="createdDate" value="#{posloviController.selected.createdDate}" title="#{bundle.CreatePosloviTitle_createdDate}" required="true" requiredMessage="#{bundle.CreatePosloviRequiredMessage_createdDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_lastModifiedDate}" for="lastModifiedDate" />
+                    <h:inputText id="lastModifiedDate" value="#{posloviController.selected.lastModifiedDate}" title="#{bundle.CreatePosloviTitle_lastModifiedDate}" required="true" requiredMessage="#{bundle.CreatePosloviRequiredMessage_lastModifiedDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_lastModifiedBy}" for="lastModifiedBy" />
+                    <h:inputText id="lastModifiedBy" value="#{posloviController.selected.lastModifiedBy}" title="#{bundle.CreatePosloviTitle_lastModifiedBy}" />
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_recordStatus}" for="recordStatus" />
+                    <h:inputText id="recordStatus" value="#{posloviController.selected.recordStatus}" title="#{bundle.CreatePosloviTitle_recordStatus}" />
+                    <h:outputLabel value="#{bundle.CreatePosloviLabel_idPoslodavca}" for="idPoslodavca" />
+                    <h:selectOneMenu id="idPoslodavca" value="#{posloviController.selected.idPoslodavca}" title="#{bundle.CreatePosloviTitle_idPoslodavca}" required="true" requiredMessage="#{bundle.CreatePosloviRequiredMessage_idPoslodavca}">
+                        <f:selectItems value="#{poslodavacController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{posloviController.create}" value="#{bundle.CreatePosloviSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{posloviController.prepareList}" value="#{bundle.CreatePosloviShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreatePosloviIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

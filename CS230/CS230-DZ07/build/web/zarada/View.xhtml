@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewZaradaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewZaradaLabel_idZarade}"/>
+                    <h:outputText value="#{zaradaController.selected.idZarade}" title="#{bundle.ViewZaradaTitle_idZarade}"/>
+                    <h:outputText value="#{bundle.ViewZaradaLabel_vrednost}"/>
+                    <h:outputText value="#{zaradaController.selected.vrednost}" title="#{bundle.ViewZaradaTitle_vrednost}"/>
+                    <h:outputText value="#{bundle.ViewZaradaLabel_mesec}"/>
+                    <h:outputText value="#{zaradaController.selected.mesec}" title="#{bundle.ViewZaradaTitle_mesec}"/>
+                    <h:outputText value="#{bundle.ViewZaradaLabel_createdDate}"/>
+                    <h:outputText value="#{zaradaController.selected.createdDate}" title="#{bundle.ViewZaradaTitle_createdDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewZaradaLabel_lastModifiedDate}"/>
+                    <h:outputText value="#{zaradaController.selected.lastModifiedDate}" title="#{bundle.ViewZaradaTitle_lastModifiedDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewZaradaLabel_lastModifiedBy}"/>
+                    <h:outputText value="#{zaradaController.selected.lastModifiedBy}" title="#{bundle.ViewZaradaTitle_lastModifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewZaradaLabel_recordStatus}"/>
+                    <h:outputText value="#{zaradaController.selected.recordStatus}" title="#{bundle.ViewZaradaTitle_recordStatus}"/>
+                    <h:outputText value="#{bundle.ViewZaradaLabel_idRadnika}"/>
+                    <h:outputText value="#{zaradaController.selected.idRadnika}" title="#{bundle.ViewZaradaTitle_idRadnika}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{zaradaController.destroyAndView}" value="#{bundle.ViewZaradaDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewZaradaEditLink}"/>
+                <br />
+                <h:commandLink action="#{zaradaController.prepareCreate}" value="#{bundle.ViewZaradaCreateLink}" />
+                <br />
+                <h:commandLink action="#{zaradaController.prepareList}" value="#{bundle.ViewZaradaShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewZaradaIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

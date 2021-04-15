@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditRadnikTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditRadnikLabel_idRadnika}" for="idRadnika" />
+                    <h:inputText id="idRadnika" value="#{radnikController.selected.idRadnika}" title="#{bundle.EditRadnikTitle_idRadnika}" required="true" requiredMessage="#{bundle.EditRadnikRequiredMessage_idRadnika}"/>
+                    <h:outputLabel value="#{bundle.EditRadnikLabel_createdDate}" for="createdDate" />
+                    <h:inputText id="createdDate" value="#{radnikController.selected.createdDate}" title="#{bundle.EditRadnikTitle_createdDate}" required="true" requiredMessage="#{bundle.EditRadnikRequiredMessage_createdDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditRadnikLabel_lastModifiedDate}" for="lastModifiedDate" />
+                    <h:inputText id="lastModifiedDate" value="#{radnikController.selected.lastModifiedDate}" title="#{bundle.EditRadnikTitle_lastModifiedDate}" required="true" requiredMessage="#{bundle.EditRadnikRequiredMessage_lastModifiedDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditRadnikLabel_lastModifiedBy}" for="lastModifiedBy" />
+                    <h:inputText id="lastModifiedBy" value="#{radnikController.selected.lastModifiedBy}" title="#{bundle.EditRadnikTitle_lastModifiedBy}" />
+                    <h:outputLabel value="#{bundle.EditRadnikLabel_recordStatus}" for="recordStatus" />
+                    <h:inputText id="recordStatus" value="#{radnikController.selected.recordStatus}" title="#{bundle.EditRadnikTitle_recordStatus}" />
+                    <h:outputLabel value="#{bundle.EditRadnikLabel_idPosla}" for="idPosla" />
+                    <h:selectOneMenu id="idPosla" value="#{radnikController.selected.idPosla}" title="#{bundle.EditRadnikTitle_idPosla}" >
+                        <f:selectItems value="#{posloviController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditRadnikLabel_idPonude}" for="idPonude" />
+                    <h:selectOneMenu id="idPonude" value="#{radnikController.selected.idPonude}" title="#{bundle.EditRadnikTitle_idPonude}" required="true" requiredMessage="#{bundle.EditRadnikRequiredMessage_idPonude}">
+                        <f:selectItems value="#{ponudaController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditRadnikLabel_idPoruke}" for="idPoruke" />
+                    <h:selectOneMenu id="idPoruke" value="#{radnikController.selected.idPoruke}" title="#{bundle.EditRadnikTitle_idPoruke}" >
+                        <f:selectItems value="#{porukaController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditRadnikLabel_idKorisnika}" for="idKorisnika" />
+                    <h:selectOneMenu id="idKorisnika" value="#{radnikController.selected.idKorisnika}" title="#{bundle.EditRadnikTitle_idKorisnika}" required="true" requiredMessage="#{bundle.EditRadnikRequiredMessage_idKorisnika}">
+                        <f:selectItems value="#{korisnikController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditRadnikLabel_radIdRadnika}" for="radIdRadnika" />
+                    <h:selectOneMenu id="radIdRadnika" value="#{radnikController.selected.radIdRadnika}" title="#{bundle.EditRadnikTitle_radIdRadnika}" >
+                        <f:selectItems value="#{radnikController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{radnikController.update}" value="#{bundle.EditRadnikSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditRadnikViewLink}"/>
+                <br />
+                <h:commandLink action="#{radnikController.prepareList}" value="#{bundle.EditRadnikShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditRadnikIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
