@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>  
+        <style>
+            body{
+                margin: 30px auto;
+                text-align: center;
+                width: 500px;
+            }
+            .div{
+                margin-left: 100px
+            }
+        </style>
+
+        <title>CS230 - DZ09 | Prikaz podataka o online studentu</title>
+    </h:head>
+    <h:body>
+        <div class="alert alert-success alert-dismissible fade show">
+            <strong>Success!</strong> Your message has been sent successfully.
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+        <h:panelGrid class="div" columns="2">
+            <h:outputLabel value="Name :" />
+            <h:outputLabel value="${onlineStudent.name}" />
+
+            <h:outputLabel  value="Last Name :" />
+            <h:outputLabel value="${onlineStudent.lastName}" />
+
+            <h:outputLabel  value="Course :" />
+            <h:outputLabel  value="${onlineStudent.course}" />
+
+            <h:outputLabel value="Index Number :" />
+            <h:outputLabel value="${onlineStudent.numIndex}" />
+
+            <h:outputLabel  value="Additional Price" />
+            <h:outputLabel  value="${onlineStudent.additonalPrice}" />
+
+            <h:outputLabel  value="Consultation:" />
+            <h:outputLabel  value="${onlineStudent.scheduleConsultation()}" />
+        </h:panelGrid>  
+    </h:body>
+</html>
+

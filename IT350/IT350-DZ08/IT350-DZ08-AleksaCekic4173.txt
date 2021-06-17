@@ -1,0 +1,168 @@
+CREATE DATABASE hotel;
+
+CREATE TABLE ODELJENJE
+(
+	ime CHARACTER(255) NOT NULL,
+    mesto CHARACTER(255),
+    
+    CONSTRAINT IME_PK PRIMARY KEY (ime)
+);
+
+CREATE TABLE zaposleni 
+(
+	ime CHARACTER(25) NOT NULL,
+    prezime CHARACTER(25) NOT NULL,
+    jmbg CHARACTER(13) NOT NULL,
+    adresa CHARACTER(25) NOT NULL,
+    telefon CHARACTER(25) NOT NULL,
+    odeljenje_ime CHARACTER(25) NOT NULL,
+    
+    CONSTRAINT IME_PK PRIMARY KEY (ime),
+    CONSTRAINT ODELJENJE_FK FOREIGN KEY (odeljenje_ime) REFERENCES odeljenje(ime)
+)
+
+CREATE TABLE gost 
+(
+	ime CHARACTER(25) NOT NULL,
+    prezime CHARACTER(25) NOT NULL,
+    jmbg CHARACTER(25) NOT NULL,
+    adresa CHARACTER(25) NOT NULL,
+    telefon CHARACTER(25) NOT NULL,
+    
+    CONSTRAINT IME_PK PRIMARY KEY (ime)
+);
+
+CREATE TABLE soba 
+(
+	broj int(10) NOT NULL,
+    opis CHARACTER(255) NOT NULL,
+    slika CHARACTER(255) NOT NULL,
+    
+    CONSTRAINT BROJ_PK PRIMARY KEY (broj)
+);
+
+CREATE TABLE rezervacija_sobe 
+(
+	imeGosta CHARACTER(25) NOT NULL,
+    brojSOBE int(10) NOT NULL,
+    datumOd DATE NOT NULL,
+    datumDo DATE NOT NULL,
+    
+    CONSTRAINT imeGosta_FK FOREIGN KEY (imeGosta) REFERENCES gost(ime),
+    CONSTRAINT brojSobe_FK FOREIGN KEY (brojSobe) REFERENCES soba(broj)
+);
+
+CREATE TABLE priprema_sobe 
+(
+	broj_sobe INT(10) NOT NULL,
+    zaposleni_ime CHARACTER(26) NOT NULL,
+    datum DATE NOT NULL,
+    
+    CONSTRAINT BROJ_SOBE_FK FOREIGN KEY (broj_sobe) REFERENCES soba(broj),
+    CONSTRAINT ZAPOSLENI_IME_FK FOREIGN KEY (zaposleni_ime) REFERENCES zaposleni(ime)
+);
+
+/*************************************/
+
+ALTER TABLE rezervacija_sobe ADD COLUMN id_rezervacije INT(10) PRIMARY KEY;
+
+--JA SAM ODMAH DODAO DA SU PRIMARNI KLJUCEVI JER NISAM VIDEO DA TREBAM TO POSEBNO, AKO JE PROBLEM ONDA EVO KAKO BIH DODAO PRIMARNI KLJUC
+
+ALTER TABLE gost
+ADD PRIMARY KEY (Ime);
+
+ALTER TABLE odeljenje
+ADD PRIMARY KEY (Ime);
+
+ALTER TABLE soba
+ADD PRIMARY KEY (broj);
+
+ALTER TABLE zaposleni
+ADD PRIMARY KEY (Naziv);
+
+ALTER TABLE rezervacija_sobe
+ADD PRIMARY KEY (id_rezervacije);
+
+-- OVDE SAM VEC DODAO U GORNJI ALTER TABLE
+
+ALTER TABLE priprema_sobe
+ADD PRIMARY KEY (id_pripreme);
+
+/*************************************/
+
+/*************************************/
+
+--Isto i za strane kljuceve
+
+ALTER TABLE zaposleni
+ADD CONSTRAINT ODELJENJE_FK
+FOREIGN KEY (odeljenje_ime) REFERENCES odeljenje(ime) ON UPDATE CASCADE ON DELETE RESTRICT;
+
+ALTER TABLE rezervacija_sobe 
+ADD CONSTRAINT imeGosta_FK
+FOREIGN KEY (imeGosta) REFERENCES gost(ime) ON UPDATE RESTRICT ON DELETE RESTRICT;
+
+ALTER TABLE rezervacija_sobe 
+ADD CONSTRAINT brojSobe_FK
+FOREIGN KEY (brojSobe) REFERENCES soba(broj) ON UPDATE RESTRICT ON DELETE RESTRICT;
+
+ALTER TABLE priprema_sobe
+ADD CONSTRAINT BROJ_SOBE_FK 
+FOREIGN KEY (broj_sobe) REFERENCES soba(broj) ON UPDATE RESTRICT ON DELETE RESTRICT;
+
+ALTER TABLE priprema_sobe
+ADD CONSTRAINT ZAPOSLENI_IME_FK 
+FOREIGN KEY (zaposleni_ime) REFERENCES zaposleni(ime) ON UPDATE CASCADE ON DELETE CASCADE;
+
+/*************************************/
+
+
+/*************************************/
+
+ALTER TABLE zaposleni
+ADD CHECK (JMBG >= 0000000000000 AND JMBG <= 9999999999999);
+
+ALTER TABLE zaposleni
+ADD CHECK (telefon >= 0000000000 AND telefon <= 9999999999);
+
+ALTER TABLE gost
+ADD CHECK (JMBG >= 0000000000000 AND JMBG <= 9999999999999);
+
+ALTER TABLE gost
+ADD CHECK (telefon >= 0000000000 AND telefon <= 9999999999);
+
+/*************************************/
+
+/*************************************/
+
+ALTER TABLE soba
+DROP COLUMN slika;
+
+/*************************************/
+
+/*************************************/
+
+CREATE TABLE sef
+(
+	imeSefa VARCHAR(255) NOT NULL ,
+	odeljenjeSefa VARCHAR(255) NOT NULL ,
+	sobaSefa INT(10) NOT NULL,
+	
+    CONSTRAINT ODELJENJE_FK FOREIGN KEY (odeljenjeSefa) REFERENCES odeljenje(ime) ON DELETE RESTRICT ON UPDATE RESTRICT,
+    CONSTRAINT SOBA_FK FOREIGN KEY (sobaSefa) REFERENCES soba (broj)ON DELETE RESTRICT ON UPDATE RESTRICT
+)
+
+/*************************************/
+
+ADD CONSTRAINT `ODELJENJE_FK` FOREIGN KEY (`odeljenjeSefa`) REFERENCES `odeljenje`(`ime`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+/*************************************/
+
+INSERT INTO `gost`(`ime`, `prezime`, `jmbg`, `adresa`, `telefon`) VALUES ("Aleksa","Cekic","0808999123456","Gornja Toponica","0648592356");
+INSERT INTO `odeljenje`(`ime`, `mesto`) VALUES ("Nisavski","Nis");
+INSERT INTO `soba`(`broj`, `opis`, `slika`) VALUES (1,"Plava soba","www.1234123.com");
+INSERT INTO `zaposleni`(`ime`, `prezime`, `jmbg`, `adresa`, `telefon`, `odeljenje_ime`) VALUES ("Stefan","Gogic","1234567890123","Pantelej, Nis","0640282345","Nisavski");
+INSERT INTO `priprema_sobe`(`broj_sobe`, `zaposleni_ime`, `datum`, `id_pripreme`) VALUES (1,"Stefan",12-2-2020,1);
+INSERT INTO `rezervacija_sobe`(`imeGosta`, `brojSOBE`, `datumOd`, `datumDo`, `id_rezervacije`) VALUES ("Aleksa",1,"01/02/2020",31-08-2020,1);
+INSERT INTO `sef`(`imeSefa`, `odeljenjeSefa`, `sobaSefa`) VALUES ("Aleksa", 1, 1);
+/*************************************/

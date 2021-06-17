@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListPosloviTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListPosloviEmpty}" rendered="#{posloviController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{posloviController.items.rowCount > 0}">
+                    <h:outputText value="#{posloviController.pagination.pageFirstItem + 1}..#{posloviController.pagination.pageLastItem + 1}/#{posloviController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{posloviController.previous}" value="#{bundle.Previous} #{posloviController.pagination.pageSize}" rendered="#{posloviController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{posloviController.next}" value="#{bundle.Next} #{posloviController.pagination.pageSize}" rendered="#{posloviController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{posloviController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_idPosla}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idPosla}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_naziv}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.naziv}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_opis}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.opis}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_maksBudzet}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.maksBudzet}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_duzinaTrajanja}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.duzinaTrajanja}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_brojPotrebnihRadnika}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.brojPotrebnihRadnika}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_kljucnaRec}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.kljucnaRec}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_createdDate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdDate}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_lastModifiedDate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lastModifiedDate}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_lastModifiedBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lastModifiedBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_recordStatus}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.recordStatus}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListPosloviTitle_idPoslodavca}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idPoslodavca}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{posloviController.prepareView}" value="#{bundle.ListPosloviViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{posloviController.prepareEdit}" value="#{bundle.ListPosloviEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{posloviController.destroy}" value="#{bundle.ListPosloviDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{posloviController.prepareCreate}" value="#{bundle.ListPosloviCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListPosloviIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

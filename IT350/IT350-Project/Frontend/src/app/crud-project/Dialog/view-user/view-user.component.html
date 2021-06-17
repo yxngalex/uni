@@ -1,0 +1,25 @@
+<form [formGroup]="form">
+  <h1>Izmeni korisnika</h1>
+  <div>
+    <mat-form-field>
+      <mat-label>Ime</mat-label>
+      <input type="text" matInput formControlName="ime">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <mat-label>Prezime</mat-label>
+      <input type="text" matInput formControlName="prezime">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <mat-label>Godine</mat-label>
+      <input type="number" matInput formControlName="godine">
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button color="primary" class="closeButton" (click)="close()" matTooltip="Zatvori">Zatvori</button>
+</form>

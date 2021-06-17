@@ -1,0 +1,47 @@
+<p>
+  <mat-toolbar color="warn">
+    <span>IT350 - Crud App</span>
+    <span class="example-spacer"></span>
+    <input class="searchField" #inputVal (keyup) = "searchKorisnik(inputVal.value)" placeholder="Pretrazi korisnika">
+  </mat-toolbar>
+</p>
+
+<div class="header">
+  <h1>Baza korisnika</h1>
+  <p>Prikaz svih korisnika iz baze! Takodje mozete pretraziti korisnika preko polja!</p>
+</div>
+
+<div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="ime">
+      <th mat-header-cell *matHeaderCellDef> Ime</th>
+      <td mat-cell *matCellDef="let korisnik"> {{korisnik.ime}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="prezime">
+      <th mat-header-cell *matHeaderCellDef> Prezime</th>
+      <td mat-cell *matCellDef="let korisnik"> {{korisnik.prezime}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="godine">
+      <th mat-header-cell *matHeaderCellDef> Godine</th>
+      <td mat-cell *matCellDef="let korisnik"> {{korisnik.godine}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="opcije">
+      <th mat-header-cell *matHeaderCellDef> Opcije </th>
+      <td mat-cell *matCellDef="let korisnik" class="actions-field">
+        <mat-icon class="view-button" (click)="openViewDialog(korisnik)" matTooltip="Pogledaj vise informacija o korisniku!">remove_red_eye</mat-icon>
+        <mat-icon class="edit-button" (click)="openEditDialog(korisnik)" matTooltip="Izmeni korisnika">create</mat-icon>
+        <mat-icon class="delete-button" (click)="openDeleteDialog(korisnik.id)" matTooltip="Izbrisi korisnika">delete</mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 15, 100]" class="paginator">
+  </mat-paginator>
+  <button mat-fab class="add-button" color="warn" matTooltip="Dodajte novog korisnika" (click)="openAddDialog()">+</button>
+</div>
+

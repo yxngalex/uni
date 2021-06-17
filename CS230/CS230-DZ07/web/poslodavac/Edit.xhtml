@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditPoslodavacTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditPoslodavacLabel_idPoslodavca}" for="idPoslodavca" />
+                    <h:inputText id="idPoslodavca" value="#{poslodavacController.selected.idPoslodavca}" title="#{bundle.EditPoslodavacTitle_idPoslodavca}" required="true" requiredMessage="#{bundle.EditPoslodavacRequiredMessage_idPoslodavca}"/>
+                    <h:outputLabel value="#{bundle.EditPoslodavacLabel_createdDate}" for="createdDate" />
+                    <h:inputText id="createdDate" value="#{poslodavacController.selected.createdDate}" title="#{bundle.EditPoslodavacTitle_createdDate}" required="true" requiredMessage="#{bundle.EditPoslodavacRequiredMessage_createdDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditPoslodavacLabel_lastModifiedDate}" for="lastModifiedDate" />
+                    <h:inputText id="lastModifiedDate" value="#{poslodavacController.selected.lastModifiedDate}" title="#{bundle.EditPoslodavacTitle_lastModifiedDate}" required="true" requiredMessage="#{bundle.EditPoslodavacRequiredMessage_lastModifiedDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditPoslodavacLabel_lastModifiedBy}" for="lastModifiedBy" />
+                    <h:inputText id="lastModifiedBy" value="#{poslodavacController.selected.lastModifiedBy}" title="#{bundle.EditPoslodavacTitle_lastModifiedBy}" />
+                    <h:outputLabel value="#{bundle.EditPoslodavacLabel_recordStatus}" for="recordStatus" />
+                    <h:inputText id="recordStatus" value="#{poslodavacController.selected.recordStatus}" title="#{bundle.EditPoslodavacTitle_recordStatus}" />
+                    <h:outputLabel value="#{bundle.EditPoslodavacLabel_idKorisnika}" for="idKorisnika" />
+                    <h:selectOneMenu id="idKorisnika" value="#{poslodavacController.selected.idKorisnika}" title="#{bundle.EditPoslodavacTitle_idKorisnika}" required="true" requiredMessage="#{bundle.EditPoslodavacRequiredMessage_idKorisnika}">
+                        <f:selectItems value="#{korisnikController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditPoslodavacLabel_idPoruke}" for="idPoruke" />
+                    <h:selectOneMenu id="idPoruke" value="#{poslodavacController.selected.idPoruke}" title="#{bundle.EditPoslodavacTitle_idPoruke}" >
+                        <f:selectItems value="#{porukaController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{poslodavacController.update}" value="#{bundle.EditPoslodavacSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditPoslodavacViewLink}"/>
+                <br />
+                <h:commandLink action="#{poslodavacController.prepareList}" value="#{bundle.EditPoslodavacShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditPoslodavacIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

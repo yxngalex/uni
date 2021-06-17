@@ -1,0 +1,35 @@
+<form [formGroup]="form">
+  <h1>Dodajte novog korisnika</h1>
+  <div class="addUserControl">
+    <div>
+      <mat-form-field>
+        <mat-label>Id</mat-label>
+        <input type="text" matInput formControlName="id" required>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Ime</mat-label>
+        <input type="text" matInput formControlName="ime" required>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Prezime</mat-label>
+        <input type="text" matInput formControlName="prezime" required>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Godine</mat-label>
+        <input type="number" matInput formControlName="godine" required>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" class="saveBtn" (click)="addANewUser()">Sacuvaj</button>
+  </div>
+
+</form>

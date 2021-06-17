@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      >
+    <h:head>
+        <title>CS230 - DZ05</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles/styles.css"/>
+    </h:head>
+    <h:body>
+        <h1>Registracija</h1>
+
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputLabel for="vrstaStudiranja" value="Vrsta studiranja"/>
+                <h:selectOneMenu id="vrsta-studiranje" value="${registrationBean.vrstaStudiranja}">
+                    <f:selectItem itemLabel="" itemValue=""/>
+                    <f:selectItem itemLabel="Online" itemValue="ONLINE"/>
+                    <f:selectItem itemLabel="Tradicionalan" itemValue="TRADICIONALAN"/>
+                </h:selectOneMenu>
+
+                <h:message for="vrstaStudiranja" />
+
+                <h:outputLabel for="fakultet" value="Fakultet"/>
+                <h:selectOneMenu id="fakultet" value="${registrationBean.fakultet}">
+                    <f:selectItem itemLabel="" itemValue=""/>
+                    <f:selectItem itemLabel="FIT" itemValue="FIT"/>
+                    <f:selectItem itemLabel="FAD" itemValue="FAD"/>
+                    <f:selectItem itemLabel="FMD" itemValue="FMD"/>
+                </h:selectOneMenu>
+
+                <h:message for="fakultet" />
+
+                <h:outputLabel for="ime" value="Ime studenta" />
+                <h:inputText id="ime" class="form-control" required="true" value="${registrationBean.ime}"/>
+                <h:message for="ime"/>
+
+                <h:outputLabel for="prezime" value="Prezime studenta" />
+                <h:inputText id="prezime" class="form-control" required="true" value="${registrationBean.prezime}" />
+                <h:message for="prezime"/>
+
+                <h:outputLabel for="starost" value="Starost studenta" />
+                <h:inputText id="starost" class="form-control" required="true" value="${registrationBean.starost}" />
+                <h:message for="starost"/>
+
+                <h:outputLabel for="email" value="Email " />
+                <h:inputText id="email" value="#{registrationBean.email}" required="true" label="Email" validatorMessage="#{registrationBean.email} is not valid">
+                    <f:validateRegex pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+" />
+                </h:inputText>
+                <h:message for="email" />
+
+                <h:commandButton id="registracija" class="btn btn-primary" value="Unesi" action="confirmation"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,17 @@
+1. Baza podataka 4
+Krenimo od pretpostavke da u tabeli gost postoje 200 gosta sa brojevima koji pocinje sa 064.
+Pretpostavljamo da postoje 60 sobe.
+Uzecemo iz tabele soba opise kao i datum od koga su rezervisali tu sobu.
+
+0.1 + (200*100)/50 000 = 0.5 s
+0.1 + (60*100)/50 000 = = 0.22 s
+
+Nakon sabiranja ove dve vrednosti dobijamo : 0.72s
+
+2. Zadatak
+
+Da bi napravili spajanje (join) R ( X , Y ) i S (Y ,Z ):
+potrebno je da hesiramo torke relacija R i S na broj skupova – grupa koji je jednak broju procesora.
+Medjutim, hesing funkcija h koju koristimo mora da zavisi samo od atributa Y, ne od svih atributa, tako da torke koje se spajaju se uvek salju u isti skup-grupu.
+Kao i kod unije, mi saljemo torke skupa i u procesor i. 
+Tada mozemo izvrsiti join u svakom procesoru koriscenjem bilo kog jedno procesorskog algoritma za spajanje.

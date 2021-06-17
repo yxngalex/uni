@@ -1,0 +1,6 @@
+4.
+db.restoran.find({"name": /Mad/}).pretty()
+8.
+db.restoran.find({$or: [{"grades.grade": "A"}, {"grades.grade": "B"}]}).pretty()
+2.
+db.restoran.find({"grades.score": {$gt: 80, $lt: 100}}).pretty()

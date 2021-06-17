@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListFajloviTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListFajloviEmpty}" rendered="#{fajloviController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{fajloviController.items.rowCount > 0}">
+                    <h:outputText value="#{fajloviController.pagination.pageFirstItem + 1}..#{fajloviController.pagination.pageLastItem + 1}/#{fajloviController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{fajloviController.previous}" value="#{bundle.Previous} #{fajloviController.pagination.pageSize}" rendered="#{fajloviController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{fajloviController.next}" value="#{bundle.Next} #{fajloviController.pagination.pageSize}" rendered="#{fajloviController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{fajloviController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListFajloviTitle_idFajla}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idFajla}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListFajloviTitle_tipFajla}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tipFajla}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListFajloviTitle_createdDate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.createdDate}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListFajloviTitle_lastModifiedDate}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lastModifiedDate}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListFajloviTitle_lastModifiedBy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.lastModifiedBy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListFajloviTitle_recordStatus}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.recordStatus}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListFajloviTitle_idRadnika}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idRadnika}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{fajloviController.prepareView}" value="#{bundle.ListFajloviViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{fajloviController.prepareEdit}" value="#{bundle.ListFajloviEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{fajloviController.destroy}" value="#{bundle.ListFajloviDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{fajloviController.prepareCreate}" value="#{bundle.ListFajloviCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListFajloviIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

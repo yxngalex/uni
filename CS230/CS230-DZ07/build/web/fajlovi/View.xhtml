@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewFajloviTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewFajloviLabel_idFajla}"/>
+                    <h:outputText value="#{fajloviController.selected.idFajla}" title="#{bundle.ViewFajloviTitle_idFajla}"/>
+                    <h:outputText value="#{bundle.ViewFajloviLabel_tipFajla}"/>
+                    <h:outputText value="#{fajloviController.selected.tipFajla}" title="#{bundle.ViewFajloviTitle_tipFajla}"/>
+                    <h:outputText value="#{bundle.ViewFajloviLabel_createdDate}"/>
+                    <h:outputText value="#{fajloviController.selected.createdDate}" title="#{bundle.ViewFajloviTitle_createdDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewFajloviLabel_lastModifiedDate}"/>
+                    <h:outputText value="#{fajloviController.selected.lastModifiedDate}" title="#{bundle.ViewFajloviTitle_lastModifiedDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewFajloviLabel_lastModifiedBy}"/>
+                    <h:outputText value="#{fajloviController.selected.lastModifiedBy}" title="#{bundle.ViewFajloviTitle_lastModifiedBy}"/>
+                    <h:outputText value="#{bundle.ViewFajloviLabel_recordStatus}"/>
+                    <h:outputText value="#{fajloviController.selected.recordStatus}" title="#{bundle.ViewFajloviTitle_recordStatus}"/>
+                    <h:outputText value="#{bundle.ViewFajloviLabel_idRadnika}"/>
+                    <h:outputText value="#{fajloviController.selected.idRadnika}" title="#{bundle.ViewFajloviTitle_idRadnika}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{fajloviController.destroyAndView}" value="#{bundle.ViewFajloviDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewFajloviEditLink}"/>
+                <br />
+                <h:commandLink action="#{fajloviController.prepareCreate}" value="#{bundle.ViewFajloviCreateLink}" />
+                <br />
+                <h:commandLink action="#{fajloviController.prepareList}" value="#{bundle.ViewFajloviShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewFajloviIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
