@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# uni
-
-*My University Repository*
-=======
 # University repository
 
 This repository is where all my projects and homeworks for my University are stored.
@@ -39,4 +34,3 @@ Each branch represents a year, and each folder represents a subject with their c
 2. **IT370** - Human-computer interaction
 3. **SE211** - Software Construction
 4. **MA202** - Mathematics 2
->>>>>>> a27d3cd51d9273708fe7f5d7b5834554fd848899
