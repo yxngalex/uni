@@ -1,71 +1,81 @@
-html, body {
-    font-family: "Roboto", sans-serif;
-    color: whitesmoke;
-    background-color: #2f2f2f;
-}
-
-.wrapper {
-    width: 100%;
-    height: 100%;
-}
-
-.header {
-    display: inline-flex;
-    vertical-align: middle;
-    align-items: center;
-    width: 100%;
-    height: 40%;
-    justify-content: space-between;
-}
-
-.header-img {
-    margin-left: 5em;
-}
-
-.header-img, .links {
-    position: relative;
-    top: 1em;
-    align-items: center;
-}
-
-.links, ul {
-    display: flex;
-    float: right;
-}
-ul, li {
-    margin-right: 2em;
-    color: white !important;
-}
-
-li, a {
-    color: whitesmoke;
+* {
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     list-style: none;
 }
 
-.content {
-    height: 100%;
-    width: 100%;
+.wrapper {
     position: relative;
-    top: 10em;
+    width: 100%;
+    min-height: 100%;
+}
+
+.background-color {
+    position: absolute;
+    width: 100%;
+    min-height: 650px;
+    background: linear-gradient(180deg, #33ccff, #ff99cc);
+}
+
+.header {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header > .logo {
+    color: white;
+    margin-left: 2em;
+    z-index: 50000;
+}
+
+.header > .sign-up-btn {
+    margin-right: 2em;
+    margin-top: .5em;
+    z-index: 50000;
+}
+
+ul {
+    display: inline-flex;
+    margin-top: .5em;
+    z-index: 50000;
+}
+
+li {
+    margin-right: 2em;
+    z-index: 50000;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "phone text";
+    position: relative;
+}
+
+.phone {
+    position: relative;
+    grid-template: "phone";
+    top: 170px;
+    left: 86px;
+    width: 700px;
+    height: 600px;
+}
+
+.text {
+    grid-template: "text";
+    position: relative;
+    top: 20em;
     text-align: center;
+    right: 8em;
+    height: auto;
 }
 
 .footer {
-    width: 100%;
-    height: 10vh;
+    position: relative;
+    top: 15em;
     text-align: center;
-    position: absolute;
-    bottom: 0;
-}
-
-.custom-btn {
-    background-color: whitesmoke;
-    color: #111;
-}
-
-.custom-btn:hover {
-    background-color: #c9c9c9;
-    color: #2f2f2f;
-    transition: .5s ease;
 }
