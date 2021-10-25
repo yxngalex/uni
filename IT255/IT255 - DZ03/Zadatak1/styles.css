@@ -1,0 +1,23 @@
+html, body {
+    background: whitesmoke;
+}
+.wrapper {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.form-validation {
+    width: 20%;
+    margin: 2em auto 0;
+}
+
+.custom-button {
+    margin-top: 2em;
+    margin-right: 1em;
+}
+
+span {
+    color: red;
+    font-size: 16px;
+}
