@@ -72,6 +72,7 @@ function validate(b) {
             user.role = "User";
         }
         console.log(user);
+        localStorage.setItem("user", JSON.stringify(user));
         window.location.replace("success.html");
         document.getElementById("select-err").innerHTML = "";
     } else {
@@ -81,12 +82,4 @@ function validate(b) {
     setTimeout(() => {
         b.disabled = false;
     }, 2000);
-}
-
-const showDate = () => {
-    if (user.password >= 6 && user.password <= 10) {
-        document.getElementById("date").innerText = user.date;
-    } else {
-        document.getElementById("date").innerText = "You password should be at least 6 to 10 characters!";
-    }
 }
