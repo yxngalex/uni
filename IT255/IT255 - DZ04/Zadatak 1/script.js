@@ -71,7 +71,6 @@ function validate(b) {
         } else {
             user.role = "User";
         }
-        console.log(user);
         localStorage.setItem("user", JSON.stringify(user));
         window.location.replace("success.html");
         document.getElementById("select-err").innerHTML = "";
