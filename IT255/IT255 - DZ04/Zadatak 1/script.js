@@ -65,7 +65,7 @@ function validate(b) {
         document.getElementById("success").innerHTML = "<span style='color: green'>Everything is OK!</span>";
         user.username = inputs[0];
         user.password = inputs[1];
-        user.email = inputs[2];
+        user.email = inputs[3];
         if (inputs[5] === "Admin") {
             user.role = "Admin";
         } else {
