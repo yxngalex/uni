@@ -1,7 +1,5 @@
 const user = JSON.parse(localStorage.getItem("user"));
 
-console.log(user);
-
 if (user.password.length >= 6 && user.password.length <= 10) {
     document.getElementById("date").innerHTML = user.date;
 } else {
