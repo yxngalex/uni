@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MetHotels';
+  newApartment: any;
+
+  apartmentObjectHandler(apartment: any): void {
+    this.newApartment = apartment;
+  }
 }

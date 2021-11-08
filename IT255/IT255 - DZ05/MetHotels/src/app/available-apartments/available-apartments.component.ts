@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-available-apartments',
@@ -7,23 +7,37 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AvailableApartmentsComponent implements OnInit {
 
-  availableApartments: string[] = [
-    'Apartmen 1',
-    'Apartmen 2',
-    'Apartmen 3',
-    'Apartmen 4',
-    'Apartmen 5'
+  public availableApartments = [
+    {
+      room: 1,
+      floor: 1,
+      price: 1000,
+      desc: 'Lorem Ipsum is simply dummy text' +
+        ' of the printing and typesetting industry. ' +
+        'Lorem Ipsum has been the industry\'s standard dummy' +
+        ' text ever since the 1500s, when an unknown printer took a ' +
+        'galley of type and scrambled it to make a type specimen book'
+    },
+    {
+      room: 2,
+      floor: 1,
+      price: 1000,
+      desc: 'Lorem Ipsum is simply dummy text' +
+        ' of the printing and typesetting industry. ' +
+        'Lorem Ipsum has been the industry\'s standard dummy' +
+        ' text ever since the 1500s, when an unknown printer took a ' +
+        'galley of type and scrambled it to make a type specimen book'
+    },
   ];
 
-  selectedApartment: string;
+  @Input() newApartment: any;
 
-  constructor() { }
-
-  ngOnInit(): void {
-    this.availableApartments.push(localStorage.getItem('apt'));
+  constructor() {
   }
 
-  selected(value: string): void {
-    this.selectedApartment = value;
+  ngOnInit(): void {
+    if (this.newApartment) {
+      this.availableApartments.push(this.newApartment);
+    }
   }
 }

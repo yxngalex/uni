@@ -1,2 +1,6 @@
 <app-header></app-header>
 <router-outlet></router-outlet>
+<div class="invisible">
+  <app-add-apartment (apartmentObject)="apartmentObjectHandler($event)"></app-add-apartment>
+  <app-available-apartments [newApartment]="newApartment"></app-available-apartments>
+</div>

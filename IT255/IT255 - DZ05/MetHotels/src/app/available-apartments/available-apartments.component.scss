@@ -1,12 +1,30 @@
+.header {
+  color: white;
+  text-align: center;
+  margin-bottom: 4em;
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
 .content {
   width: 50%;
-  height: 50%;
-  margin: 0 auto;
+  height: auto;
   display: block;
+  margin: 0 auto 2em;
+  position: relative;
 
-  .select {
-    position: relative;
-    left: 27em;
-    margin: 0 auto;
+  .section {
+    text-align: center;
+
+    .text {
+      color: palevioletred;
+    }
+
+    button {
+      float: right;
+      top: -2em;
+    }
   }
 }
