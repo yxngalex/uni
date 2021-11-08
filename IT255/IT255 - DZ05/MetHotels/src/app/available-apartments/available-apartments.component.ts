@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-available-apartments',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AvailableApartmentsComponent implements OnInit {
 
+  availableApartments: string[] = [
+    'Apartmen 1',
+    'Apartmen 2',
+    'Apartmen 3',
+    'Apartmen 4',
+    'Apartmen 5'
+  ];
+
+  selectedApartment: string;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.availableApartments.push(localStorage.getItem('apt'));
   }
 
+  selected(value: string): void {
+    this.selectedApartment = value;
+  }
 }
