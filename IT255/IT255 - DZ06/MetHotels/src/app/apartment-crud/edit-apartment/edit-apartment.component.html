@@ -1,0 +1,30 @@
+<div>
+  <mat-card class="content">
+    <h3>Dodaj nov apartment</h3>
+    <mat-card-content>
+      <form (ngSubmit)="edit()" [formGroup]="form">
+        <div>
+          <mat-form-field>
+            <mat-label>Broj sobe</mat-label>
+            <input formControlName="room" matInput required type="number" min="0" max="100">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Cena</mat-label>
+            <input formControlName="price" matInput required type="number" min="0">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Opis</mat-label>
+            <input formControlName="desc" matInput required type="text">
+          </mat-form-field>
+        </div>
+        <div>
+          <button type="submit" mat-stroked-button color="primary">Sacuvaj</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
