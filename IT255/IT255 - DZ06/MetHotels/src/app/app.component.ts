@@ -1,8 +1,11 @@
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {AddApartmentComponent} from "./apartment-crud/add-apartment/add-apartment.component";
 import {Apartment} from "./common/@Types/apartment";
-import {EditApartmentComponent} from './apartment-crud/edit-apartment/edit-apartment.component';
+import {EditApartmentComponent} from "./apartment-crud/edit-apartment/edit-apartment.component";
+import {RoomService} from "./common/services/room.service";
+import {DeleteApartmentComponent} from "./apartment-crud/delete-apartment/delete-apartment.component";
+import {CheckoutApartmentComponent} from "./apartment-crud/checkout-apartment/checkout-apartment.component";
 
 @Component({
   selector: "app-root",
@@ -80,7 +83,9 @@ export class AppComponent {
     },
   ];
 
-  constructor(public dialog: MatDialog) {
+  @Input() apartment: Apartment;
+
+  constructor(public dialog: MatDialog, private service: RoomService) {
   }
 
   openSaveDialog(): void {
@@ -95,10 +100,31 @@ export class AppComponent {
         room: apart.room,
         floor: apart.floor,
         price: apart.price,
-        desc: apart.desc
+        desc: apart.desc,
+        numOfNights: apart.numOfNights
       };
       this.availableApartments.push(apartment);
     });
+  }
+
+  deleteApartmant(apartId: number): void {
+    const dialogConf = new MatDialogConfig();
+    dialogConf.autoFocus = true;
+    dialogConf.width = "50%";
+    const dialogRef = this.dialog.open(DeleteApartmentComponent, dialogConf);
+    dialogRef.afterClosed().toPromise().then(result => {
+      if (result !== undefined) {
+        if (result === true) {
+          this.availableApartments.slice(apartId);
+        } else if (result === false) {
+          dialogRef.close();
+        }
+      }
+    });
+  }
+
+  private fullPrice(numOfNights, apartmentPrice): number {
+    return this.service.getPrice(numOfNights, apartmentPrice);
   }
 
   openEditDialog(apartment: Apartment): void {
@@ -114,4 +140,17 @@ export class AppComponent {
     );
   }
 
+  openBuyDialog(apartment: Apartment): void {
+    const dialogConf = new MatDialogConfig();
+    dialogConf.autoFocus = true;
+    dialogConf.width = "50%";
+    dialogConf.data = apartment;
+    const dialogRef = this.dialog.open(CheckoutApartmentComponent, dialogConf);
+    dialogRef.afterClosed().subscribe(numOfNights => {
+      console.log(
+        this.fullPrice(numOfNights.numOfNights, apartment.price)
+      );
+    });
+
+  }
 }

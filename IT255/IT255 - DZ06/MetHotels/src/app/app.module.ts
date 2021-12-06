@@ -16,13 +16,18 @@ import {AddApartmentComponent} from "./apartment-crud/add-apartment/add-apartmen
 import {SearchPipe} from "./common/search.pipe";
 import {MatDialogModule} from "@angular/material/dialog";
 import { EditApartmentComponent } from "./apartment-crud/edit-apartment/edit-apartment.component";
+import {RoomService} from "./common/services/room.service";
+import { DeleteApartmentComponent } from "./apartment-crud/delete-apartment/delete-apartment.component";
+import { CheckoutApartmentComponent } from "./apartment-crud/checkout-apartment/checkout-apartment.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     AddApartmentComponent,
     SearchPipe,
-    EditApartmentComponent
+    EditApartmentComponent,
+    DeleteApartmentComponent,
+    CheckoutApartmentComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,7 @@ import { EditApartmentComponent } from "./apartment-crud/edit-apartment/edit-apa
     MatInputModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [RoomService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
