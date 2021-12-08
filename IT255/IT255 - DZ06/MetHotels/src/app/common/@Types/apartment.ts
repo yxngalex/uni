@@ -4,5 +4,4 @@ export interface Apartment {
   floor: number;
   price: number;
   desc: string;
-  numOfNights: number;
 }

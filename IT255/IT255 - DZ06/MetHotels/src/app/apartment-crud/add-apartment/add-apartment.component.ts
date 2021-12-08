@@ -12,6 +12,7 @@ export class AddApartmentComponent implements OnInit {
   input = "";
 
   form = new FormGroup({
+    id: new FormControl(null),
     room: new FormControl(null, [Validators.required]),
     floor: new FormControl(null, [Validators.required]),
     price: new FormControl(null, [Validators.required]),
@@ -24,13 +25,11 @@ export class AddApartmentComponent implements OnInit {
   }
 
   save(): void {
+    console.log(this.form.value);
     if (this.form.valid) {
-      this.dialogRef.close({
-        room: this.form.controls.room.value,
-        floor: this.form.controls.floor.value,
-        price: this.form.controls.price.value,
-        desc: this.form.controls.desc.value
-      });
+      this.dialogRef.close(
+        this.form.value
+      );
     }
   }
 

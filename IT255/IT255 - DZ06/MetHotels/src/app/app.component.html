@@ -9,18 +9,18 @@
 </div>
 <mat-card class="content" *ngFor="let apartment of availableApartments">
   <mat-card-content>
-    <mat-card-title>Broj sobe: {{apartment.room}}</mat-card-title>
-    <mat-card-subtitle>Sprat: {{apartment.floor}}</mat-card-subtitle>
+    <mat-card-title>Broj sobe: {{apartment?.room}}</mat-card-title>
+    <mat-card-subtitle>Sprat: {{apartment?.floor}}</mat-card-subtitle>
     <p>Opis sobe: </p>
-    <p>{{apartment.desc}}</p>
+    <p>{{apartment?.desc}}</p>
   </mat-card-content>
   <mat-card-content class="section">
-    <p>Cena: <span class="text">${{apartment.price}}</span></p>
+    <p>Cena: <span class="text">${{apartment?.price}}</span></p>
     <button mat-flat-button color="primary" (click)="openBuyDialog(apartment)">Kupi</button>
     <button mat-flat-button color="primary" (click)="openEditDialog(apartment)">
       <mat-icon>edit</mat-icon>
     </button>
-    <button mat-flat-button color="primary" (click)="deleteApartmant(apartment.id)">
+    <button mat-flat-button color="primary" (click)="deleteApartmant(apartment)">
       <mat-icon>delete</mat-icon>
     </button>
   </mat-card-content>
