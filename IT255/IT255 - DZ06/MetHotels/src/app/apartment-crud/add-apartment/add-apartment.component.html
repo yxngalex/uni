@@ -24,11 +24,11 @@
         <div>
           <mat-form-field>
             <mat-label>Opis</mat-label>
-            <input formControlName="desc" matInput required type="text">
+            <input formControlName="desc" matInput required type="text" #desc (change)="checkLength(desc.value)">
           </mat-form-field>
         </div>
         <div>
-          <button type="submit" mat-stroked-button color="primary" (click)="save()">Sacuvaj</button>
+          <button type="submit" mat-stroked-button color="primary" (click)="save()" [disabled]="disabled">Sacuvaj</button>
         </div>
       </form>
     </mat-card-content>

@@ -1,6 +1,5 @@
 import {Component, Inject, OnInit} from "@angular/core";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {RoomService} from "../../common/services/room.service";
 import {Apartment} from "../../common/@Types/apartment";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
@@ -26,7 +25,7 @@ export class CheckoutApartmentComponent implements OnInit {
   save(): void {
     if (this.form.valid) {
       this.dialogRef.close({
-        numOfNights: this.form.value.numOfNights
+        numOfNights: this.form.value
       });
     }
   }
