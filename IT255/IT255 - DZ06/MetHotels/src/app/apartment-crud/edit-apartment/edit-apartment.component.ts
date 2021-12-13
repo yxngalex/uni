@@ -10,6 +10,7 @@ import {Apartment} from "../../common/@Types/apartment";
 })
 export class EditApartmentComponent implements OnInit {
   form = new FormGroup({
+    id: new FormControl(null),
     room: new FormControl(null, [Validators.required]),
     floor: new FormControl(null, [Validators.required]),
     price: new FormControl(null, [Validators.required]),
@@ -20,19 +21,14 @@ export class EditApartmentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.form.get("room")?.setValue(this.data.room);
-    this.form.get("floor")?.setValue(this.data.floor);
-    this.form.get("price")?.setValue(this.data.price);
-    this.form.get("desc")?.setValue(this.data.desc);
+    this.form.setValue(this.data);
   }
 
   edit(): void {
     if (this.form.valid) {
-      this.dialogRef.close({
-        room: this.form.controls.room.value,
-        price: this.form.controls.price.value,
-        desc: this.form.controls.desc.value
-      });
+      this.dialogRef.close(
+        this.form.value
+      );
     }
   }
 

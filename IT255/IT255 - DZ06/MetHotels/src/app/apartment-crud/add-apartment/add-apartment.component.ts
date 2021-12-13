@@ -9,33 +9,36 @@ import {MatDialogRef} from "@angular/material/dialog";
   styleUrls: ["./add-apartment.component.scss"]
 })
 export class AddApartmentComponent implements OnInit {
-  input = "";
+  disabled = true;
 
   form = new FormGroup({
+    id: new FormControl(null),
     room: new FormControl(null, [Validators.required]),
     floor: new FormControl(null, [Validators.required]),
     price: new FormControl(null, [Validators.required]),
-    desc:  new FormControl(null, [Validators.required])
+    desc: new FormControl(null, [Validators.required])
   });
 
-  constructor(public dialogRef: MatDialogRef<AddApartmentComponent>) { }
+  constructor(public dialogRef: MatDialogRef<AddApartmentComponent>) {
+  }
 
   ngOnInit(): void {
   }
 
   save(): void {
+    console.log(this.form.value);
     if (this.form.valid) {
-      this.dialogRef.close({
-        room: this.form.controls.room.value,
-        floor: this.form.controls.floor.value,
-        price: this.form.controls.price.value,
-        desc: this.form.controls.desc.value
-      });
+      this.dialogRef.close(
+        this.form.value
+      );
     }
   }
 
-  checkLength(text: string): void {
-    if (text.length < 6) {}
-    window.alert("Dužina ne sme biti manja od 6 karaktera!");
+  checkLength(value: string): void {
+    console.log(value);
+    if (value.length < 6) {
+      window.alert("Dužina ne sme biti manja od 6 karaktera!");
+    }
+    this.disabled = false;
   }
 }

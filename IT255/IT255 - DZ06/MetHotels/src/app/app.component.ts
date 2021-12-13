@@ -101,13 +101,12 @@ export class AppComponent {
         floor: apart.floor,
         price: apart.price,
         desc: apart.desc,
-        numOfNights: apart.numOfNights
       };
       this.availableApartments.push(apartment);
     });
   }
 
-  deleteApartmant(apartId: number): void {
+  deleteApartmant(apart: Apartment): void {
     const dialogConf = new MatDialogConfig();
     dialogConf.autoFocus = true;
     dialogConf.width = "50%";
@@ -115,7 +114,10 @@ export class AppComponent {
     dialogRef.afterClosed().toPromise().then(result => {
       if (result !== undefined) {
         if (result === true) {
-          this.availableApartments.slice(apartId);
+          const index = this.availableApartments.indexOf(apart);
+          if (index > -1) {
+            this.availableApartments.splice(index, 1);
+          }
         } else if (result === false) {
           dialogRef.close();
         }
@@ -134,7 +136,13 @@ export class AppComponent {
     dialogConf.data = apartment;
     const dialogRef = this.dialog.open(EditApartmentComponent, dialogConf);
     dialogRef.afterClosed().subscribe(apart => {
-        const index = this.availableApartments.findIndex((obj => obj.id === apart.id));
+        console.log(apart);
+        const index = this.availableApartments.findIndex((obj => {
+          console.log(obj.id);
+          console.log(apart);
+          return obj.id === apart.id;
+        }));
+        console.log(index);
         this.availableApartments[index] = apart;
       }
     );

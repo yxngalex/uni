@@ -12,23 +12,23 @@
         <div>
           <mat-form-field>
             <mat-label>Sprat</mat-label>
-            <input formControlName="floor" matInput required type="number" min="0" [(ngModel)]="input" (change)="checkLength(input)">
+            <input formControlName="floor" matInput required type="number" min="0">
           </mat-form-field>
         </div>
         <div>
           <mat-form-field>
             <mat-label>Cena</mat-label>
-            <input formControlName="price" matInput required type="number" min="0" [(ngModel)]="input" (change)="checkLength(input)">
+            <input formControlName="price" matInput required type="number" min="0">
           </mat-form-field>
         </div>
         <div>
           <mat-form-field>
             <mat-label>Opis</mat-label>
-            <input formControlName="desc" matInput required type="text">
+            <input formControlName="desc" matInput required type="text" #desc (change)="checkLength(desc.value)">
           </mat-form-field>
         </div>
         <div>
-          <button type="submit" mat-stroked-button color="primary" (click)="save()">Sacuvaj</button>
+          <button type="submit" mat-stroked-button color="primary" (click)="save()" [disabled]="disabled">Sacuvaj</button>
         </div>
       </form>
     </mat-card-content>
