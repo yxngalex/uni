@@ -1,5 +1,5 @@
 export interface Apartment {
-  id: number;
+  id?: number;
   room: number;
   floor: number;
   price: number;

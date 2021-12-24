@@ -19,6 +19,8 @@ import { EditApartmentComponent } from "./apartment-crud/edit-apartment/edit-apa
 import {RoomService} from "./common/services/room.service";
 import { DeleteApartmentComponent } from "./apartment-crud/delete-apartment/delete-apartment.component";
 import { CheckoutApartmentComponent } from "./apartment-crud/checkout-apartment/checkout-apartment.component";
+import {StoreModule} from "@ngrx/store";
+import {apartmantReducer} from "./common/redux/apartment/apartmant-reducer";
 
 @NgModule({
   declarations: [
@@ -42,7 +44,12 @@ import { CheckoutApartmentComponent } from "./apartment-crud/checkout-apartment/
     MatOptionModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    StoreModule.forRoot(
+      {
+        apartment: apartmantReducer
+      }
+    )
   ],
   providers: [RoomService],
   bootstrap: [AppComponent]

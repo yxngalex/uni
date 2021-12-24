@@ -2,35 +2,33 @@
   <mat-card class="content">
     <h3>Dodaj nov apartment</h3>
     <mat-card-content>
-      <form [formGroup]="form">
           <div>
             <mat-form-field>
               <mat-label>Broj sobe</mat-label>
-              <input formControlName="room" matInput required type="number" min="0" max="100">
+              <input matInput required type="number" min="0" max="100" #room>
             </mat-form-field>
           </div>
         <div>
           <mat-form-field>
             <mat-label>Sprat</mat-label>
-            <input formControlName="floor" matInput required type="number" min="0">
+            <input matInput required type="number" min="0" #floor>
           </mat-form-field>
         </div>
         <div>
           <mat-form-field>
             <mat-label>Cena</mat-label>
-            <input formControlName="price" matInput required type="number" min="0">
+            <input matInput required type="number" min="0" #price>
           </mat-form-field>
         </div>
         <div>
           <mat-form-field>
             <mat-label>Opis</mat-label>
-            <input formControlName="desc" matInput required type="text" #desc (change)="checkLength(desc.value)">
+            <input matInput required type="text" #desc>
           </mat-form-field>
         </div>
         <div>
-          <button type="submit" mat-stroked-button color="primary" (click)="save()" [disabled]="disabled">Sacuvaj</button>
+          <button type="submit" mat-stroked-button color="primary" (click)="addApartment(room.value, floor.value, price.value, desc.value)">Sacuvaj</button>
         </div>
-      </form>
     </mat-card-content>
   </mat-card>
 </div>
