@@ -1,0 +1,14 @@
+<div class="about">
+  <div *ngIf="!show">
+    <form [formGroup]="form">
+      <mat-form-field>
+        <mat-label>How many facts do you want?</mat-label>
+        <input formControlName="facts" matInput required type="number" #facts min="0" max="100"
+               (ngModelChange)="check(facts.value)">
+      </mat-form-field>
+    </form>
+  </div>
+  <div *ngIf="show">
+    <app-cat-fact [num]="num"></app-cat-fact>
+  </div>
+</div>
