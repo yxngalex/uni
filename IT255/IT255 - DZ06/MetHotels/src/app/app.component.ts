@@ -17,12 +17,12 @@ import {AppState} from "./common/redux/app.state";
 })
 export class AppComponent {
 
-  apartments: Observable<Apartment[]>;
+  apartment$: Observable<Apartment[]>;
 
   @Input() apartment: Apartment;
 
   constructor(public dialog: MatDialog, private service: RoomService, private store: Store<AppState>) {
-    this.apartments = store.select("apartment");
+    this.apartment$ = this.store.select("apartment");
   }
 
   openSaveDialog(): void {
@@ -57,17 +57,17 @@ export class AppComponent {
     return this.service.getPrice(numOfNights, apartmentPrice);
   }
 
-  openBuyDialog(apartment: Apartment): void {
-    const dialogConf = new MatDialogConfig();
-    dialogConf.autoFocus = true;
-    dialogConf.width = "50%";
-    dialogConf.data = apartment;
-    const dialogRef = this.dialog.open(CheckoutApartmentComponent, dialogConf);
-    dialogRef.afterClosed().subscribe(numOfNights => {
-      console.log(
-        this.fullPrice(numOfNights.numOfNights, apartment.price)
-      );
-    });
-
-  }
+  // openBuyDialog(apartment: Apartment): void {
+  //   const dialogConf = new MatDialogConfig();
+  //   dialogConf.autoFocus = true;
+  //   dialogConf.width = "50%";
+  //   dialogConf.data = apartment;
+  //   const dialogRef = this.dialog.open(CheckoutApartmentComponent, dialogConf);
+  //   dialogRef.afterClosed().subscribe(numOfNights => {
+  //     console.log(
+  //       this.fullPrice(numOfNights.numOfNights, apartment.price)
+  //     );
+  //   });
+  //
+  // }
 }

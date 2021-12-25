@@ -1,5 +1,5 @@
 <div class="crud-buttons">
-  <h2>Dodajte ili izmenite sobu!</h2>
+  <h2>Dodajte</h2>
   <button mat-fab color="primary" (click)="openSaveDialog()">
     <mat-icon>add</mat-icon>
   </button>
@@ -7,7 +7,7 @@
 <div class="header">
   <h2>Pregled dostupnih apartmana</h2>
 </div>
-<mat-card class="content" *ngFor="let apartment of apartments | async">
+<mat-card class="content" *ngFor="let apartment of apartment$ | async">
   <mat-card-content>
     <mat-card-title>Broj sobe: {{apartment?.room}}</mat-card-title>
     <mat-card-subtitle>Sprat: {{apartment?.floor}}</mat-card-subtitle>
@@ -16,6 +16,6 @@
   </mat-card-content>
   <mat-card-content class="section">
     <p>Cena: <span class="text">${{apartment?.price}}</span></p>
-    <button mat-flat-button color="primary" (click)="openBuyDialog(apartment)">Kupi</button>
+<!--    <button mat-flat-button color="primary" (click)="openBuyDialog(apartment)">Kupi</button>-->
   </mat-card-content>
 </mat-card>
