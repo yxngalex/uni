@@ -10,7 +10,6 @@ import * as ApartmentActions from "../../common/redux/apartment/apartment-action
   styleUrls: ["./add-apartment.component.scss"]
 })
 export class AddApartmentComponent implements OnInit {
-  disabled = true;
 
   constructor(public dialogRef: MatDialogRef<AddApartmentComponent>, private store: Store<AppState>) {
   }

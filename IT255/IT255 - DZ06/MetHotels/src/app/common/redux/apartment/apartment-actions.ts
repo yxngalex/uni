@@ -9,11 +9,4 @@ export class AddApartment implements Action {
   }
 }
 
-export class RemoveApartment implements Action {
-  readonly type = ApartmentActionTypes.REMOVE_APARTMENT;
-
-  constructor(public payload: Apartment) {
-  }
-}
-
-export type Actions = AddApartment | RemoveApartment;
+export type Actions = AddApartment;

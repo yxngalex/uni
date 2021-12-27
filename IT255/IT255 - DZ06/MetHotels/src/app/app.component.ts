@@ -1,4 +1,4 @@
-import {Component, Input} from "@angular/core";
+import {Component, Input, OnInit} from "@angular/core";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {AddApartmentComponent} from "./apartment-crud/add-apartment/add-apartment.component";
 import {Apartment} from "./common/@Types/apartment";
@@ -15,7 +15,7 @@ import {AppState} from "./common/redux/app.state";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   apartment$: Observable<Apartment[]>;
 
@@ -25,7 +25,10 @@ export class AppComponent {
     this.apartment$ = this.store.select("apartment");
   }
 
-  openSaveDialog(): void {
+  ngOnInit(): void {
+  }
+
+  add(): void {
     const dialogConf = new MatDialogConfig();
     dialogConf.autoFocus = true;
     dialogConf.width = "50%";
@@ -34,40 +37,4 @@ export class AppComponent {
     });
   }
 
-  // deleteApartmant(apart: Apartment): void {
-  //   const dialogConf = new MatDialogConfig();
-  //   dialogConf.autoFocus = true;
-  //   dialogConf.width = "50%";
-  //   const dialogRef = this.dialog.open(DeleteApartmentComponent, dialogConf);
-  //   dialogRef.afterClosed().toPromise().then(result => {
-  //     if (result !== undefined) {
-  //       if (result === true) {
-  //         const index = this.availableApartments.indexOf(apart);
-  //         if (index > -1) {
-  //           this.availableApartments.splice(index, 1);
-  //         }
-  //       } else if (result === false) {
-  //         dialogRef.close();
-  //       }
-  //     }
-  //   });
-  // }
-
-  private fullPrice(numOfNights, apartmentPrice): number {
-    return this.service.getPrice(numOfNights, apartmentPrice);
-  }
-
-  // openBuyDialog(apartment: Apartment): void {
-  //   const dialogConf = new MatDialogConfig();
-  //   dialogConf.autoFocus = true;
-  //   dialogConf.width = "50%";
-  //   dialogConf.data = apartment;
-  //   const dialogRef = this.dialog.open(CheckoutApartmentComponent, dialogConf);
-  //   dialogRef.afterClosed().subscribe(numOfNights => {
-  //     console.log(
-  //       this.fullPrice(numOfNights.numOfNights, apartment.price)
-  //     );
-  //   });
-  //
-  // }
 }

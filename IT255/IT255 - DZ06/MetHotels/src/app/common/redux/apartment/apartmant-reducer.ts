@@ -12,10 +12,7 @@ const INITIAL_STATE = {
 export const apartmantReducer = (state: Apartment[] = [INITIAL_STATE], action: ApartmentActions.Actions) => {
   switch (action.type) {
     case ApartmentActionTypes.ADD_APARTMENT:
-      return {
-        ...state,
-        aparment: action.payload
-      };
+      return [...state, action.payload];
     default:
       return state;
   }
