@@ -1,0 +1,600 @@
+{
+  "id": "DFZ",
+  "guid": "dd3d71ff-832d-4a20-85e5-2f3c3910cf00",
+  "name": "Dokument Funkcionalni zahtevi",
+  "lastId": 11,
+  "createdOn": "2022-01-15T20:13:27.569Z",
+  "createdBy": {
+    "name": "aleksa.cekic.4173",
+    "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+    "company": "Metropolitan"
+  },
+  "lastChangedOn": "2022-01-15T20:23:39.746Z",
+  "lastChangedBy": {
+    "name": "aleksa.cekic.4173",
+    "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+    "company": "Metropolitan"
+  },
+  "data": [
+    {
+      "id": "1",
+      "guid": "09264138-3acb-4aa5-aff1-c24aa63038bc",
+      "heading": "Pristup sistemu po rolama",
+      "text": "<p>Sistem omogućava korisnicima da pristupaju sistemu po njihovim rolama (profesor, kandidat, administrator).</p>",
+      "history": [
+        {
+          "affectedNodeId": "#",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:13:27.668Z",
+          "docId": "DFZ",
+          "structureAction": "Create"
+        },
+        {
+          "attributesChanged": {
+            "heading": null,
+            "text": null
+          },
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:14:53.497Z"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "guid": "1bc0c6b9-3da7-43db-aa7d-eb15de27f721",
+      "heading": "Online video časovi",
+      "text": "<p>Sistem omogućava profesorima da pokrenu online video časove.</p>",
+      "history": [
+        {
+          "affectedNodeId": "#",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:15:58.322Z",
+          "docId": "DFZ",
+          "structureAction": "Create"
+        },
+        {
+          "attributesChanged": {
+            "heading": null,
+            "text": null
+          },
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:16:38.240Z"
+        },
+        {
+          "affectedNodeId": "3",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:16:50.662Z",
+          "docId": "DFZ",
+          "structureAction": "SwapUp"
+        },
+        {
+          "affectedNodeId": "1",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:16:52.042Z",
+          "docId": "DFZ",
+          "structureAction": "SwapUp"
+        },
+        {
+          "affectedNodeId": "1",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:16:53.126Z",
+          "docId": "DFZ",
+          "structureAction": "SwapDown"
+        }
+      ],
+      "children": [
+        {
+          "id": "2",
+          "guid": "31c5e86f-f11f-4e2b-b0af-7fdc67ff4943",
+          "heading": "Evidencija kandidata",
+          "text": "<p>Sistem omogućava profesoru da evidentira kandidate koji su prisutni na nastavi.</p>",
+          "history": [
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:14:59.462Z",
+              "docId": "DFZ",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null,
+                "text": null
+              },
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:15:28.139Z"
+            },
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:15:32.279Z",
+              "docId": "DFZ",
+              "structureAction": "Demote"
+            },
+            {
+              "affectedNodeId": "1",
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:16:56.520Z",
+              "docId": "DFZ",
+              "structureAction": "Promote"
+            },
+            {
+              "affectedNodeId": "4",
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:16:57.095Z",
+              "docId": "DFZ",
+              "structureAction": "SwapDown"
+            },
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:16:58.140Z",
+              "docId": "DFZ",
+              "structureAction": "Demote"
+            },
+            {
+              "attributesChanged": {
+                "text": "<p>Profesor ima mogućnost da evidentira kandidate koji su prisutni na nastavi.</p>"
+              },
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:23:00.225Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "guid": "34372c05-b6ea-4c1d-8a0a-3c5d541db8ea",
+      "heading": "Pristup nastavi koja je u toku",
+      "text": "<p>Sistem dozvoljava kandidatu da pristupi nastavi koja je u toku.</p>",
+      "history": [
+        {
+          "affectedNodeId": "1",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:15:34.693Z",
+          "docId": "DFZ",
+          "structureAction": "Create"
+        },
+        {
+          "attributesChanged": {
+            "heading": null,
+            "text": null
+          },
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:15:55.339Z"
+        },
+        {
+          "affectedNodeId": "1",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:15:56.996Z",
+          "docId": "DFZ",
+          "structureAction": "Promote"
+        },
+        {
+          "attributesChanged": {
+            "text": "<p>Kandidat ima mogućnost da pristupi nastavi koja je u toku.</p>"
+          },
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:22:48.983Z"
+        }
+      ],
+      "children": [
+        {
+          "id": "5",
+          "guid": "ac0fcde2-4488-45e1-8fa4-b7041bbdde68",
+          "heading": "Izrada testova",
+          "text": "<p>Sistem dozvoljava kandidatima da rade testove koji su postavljeni na sistemu, kao i simulacije.</p>",
+          "history": [
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:17:04.423Z",
+              "docId": "DFZ",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null,
+                "text": null
+              },
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:17:43.089Z"
+            },
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:17:46.425Z",
+              "docId": "DFZ",
+              "structureAction": "Demote"
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "guid": "89b74ca9-46db-4b62-84c4-ddc9876af1ef",
+          "heading": "Pristup dodatnim materijalima",
+          "text": "<p>Sistem dozvoljava kandidatu da pristupi dodatnim materijalima.</p>",
+          "history": [
+            {
+              "affectedNodeId": "3",
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:17:48.645Z",
+              "docId": "DFZ",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null,
+                "text": null
+              },
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:18:15.856Z"
+            },
+            {
+              "attributesChanged": {
+                "text": "<p>Kandidat ima mogućnost da pristupi dodatnim materijalima.</p>"
+              },
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:22:30.870Z"
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "guid": "a655d6f5-f370-4860-af22-05a2ba751f1f",
+          "heading": "Četovanje",
+          "text": "<p>Sistem dozvoljava kandidatu da četuje dok su predavanja u toku.</p>",
+          "history": [
+            {
+              "affectedNodeId": "3",
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:18:20.796Z",
+              "docId": "DFZ",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null,
+                "text": null
+              },
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:18:53.571Z"
+            },
+            {
+              "attributesChanged": {
+                "text": "<p>Kandidat ima mogućnost četovanju prilikom slušanja predavanja.</p>"
+              },
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:22:15.738Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "guid": "f87b4241-bdc5-4f81-b9ec-2f9d524c6c35",
+      "heading": "Evidencija profesora i kandidata",
+      "text": "<p>Sistem omogućava administratorima evidenciju profesora i kandidata.</p>",
+      "history": [
+        {
+          "affectedNodeId": "3",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:18:55.943Z",
+          "docId": "DFZ",
+          "structureAction": "Create"
+        },
+        {
+          "attributesChanged": {
+            "heading": null,
+            "text": null
+          },
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:19:54.271Z"
+        },
+        {
+          "affectedNodeId": "3",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:19:57.363Z",
+          "docId": "DFZ",
+          "structureAction": "Promote"
+        },
+        {
+          "attributesChanged": {
+            "heading": "Evidencija profesora",
+            "text": "<p>Sistem omogućava administratorima evidenciju profesora.</p>"
+          },
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:20:10.811Z"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "guid": "ea95225d-6257-41d9-b988-44b807bbf3e5",
+      "heading": "Upravljanje finansijama",
+      "text": "<p>Sistem omogućava finansijskoj službi da upravlja finansijama.</p>",
+      "history": [
+        {
+          "affectedNodeId": "#",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:20:15.480Z",
+          "docId": "DFZ",
+          "structureAction": "Create"
+        },
+        {
+          "attributesChanged": {
+            "heading": null,
+            "text": null
+          },
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:20:44.603Z"
+        }
+      ],
+      "children": [
+        {
+          "id": "10",
+          "guid": "6f126e6a-305b-4e17-a5a0-aa6e4ada315c",
+          "heading": "Izveštavanje finansija",
+          "text": "<p>Sistem omogućava Finansijsku službuda izvršava izveštavanje.</p>",
+          "history": [
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:20:46.721Z",
+              "docId": "DFZ",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null
+              },
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:21:01.803Z"
+            },
+            {
+              "attributesChanged": {
+                "heading": "Izvršavanje finansija",
+                "text": null
+              },
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:21:45.002Z"
+            },
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "Metropolitan",
+                "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+                "name": "aleksa.cekic.4173"
+              },
+              "changedOn": "2022-01-15T20:23:39.746Z",
+              "docId": "DFZ",
+              "structureAction": "Demote"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "guid": "a55fd3e1-fb58-4bc3-be99-d2fd4fdf3196",
+      "heading": "Pristup izveštajima",
+      "text": "<p>Sistem omogućava vlasinku pristup izveštajima.</p>",
+      "history": [
+        {
+          "affectedNodeId": "10",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:23:07.669Z",
+          "docId": "DFZ",
+          "structureAction": "Create"
+        },
+        {
+          "attributesChanged": {
+            "heading": null,
+            "text": null
+          },
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:23:35.940Z"
+        },
+        {
+          "affectedNodeId": "10",
+          "changedBy": {
+            "company": "Metropolitan",
+            "email": "aleksa.cekic.4173@metropolitan.ac.rs",
+            "name": "aleksa.cekic.4173"
+          },
+          "changedOn": "2022-01-15T20:23:38.211Z",
+          "docId": "DFZ",
+          "structureAction": "Promote"
+        }
+      ]
+    }
+  ],
+  "attributes": {
+  },
+  "view": {
+    "columns": [
+      {
+        "columnId": "id",
+        "hidden": false,
+        "width": 65
+      },
+      {
+        "columnId": "description",
+        "hidden": false,
+        "width": 500
+      },
+      {
+        "columnId": "attributes",
+        "hidden": true,
+        "width": 300
+      },
+      {
+        "columnId": "discussion",
+        "hidden": true,
+        "width": 300
+      },
+      {
+        "columnId": "links",
+        "hidden": true,
+        "width": 300
+      }
+    ]
+  },
+  "metadata": {
+    "format": "2.13"
+  }
+}
