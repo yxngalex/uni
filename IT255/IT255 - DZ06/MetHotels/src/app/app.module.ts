@@ -21,6 +21,7 @@ import { DeleteApartmentComponent } from "./apartment-crud/delete-apartment/dele
 import { CheckoutApartmentComponent } from "./apartment-crud/checkout-apartment/checkout-apartment.component";
 import {StoreModule} from "@ngrx/store";
 import {apartmantReducer} from "./common/redux/apartment/apartmant-reducer";
+import { DLogoDirective } from './common/directives/dLogo/d-logo.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {apartmantReducer} from "./common/redux/apartment/apartmant-reducer";
     SearchPipe,
     EditApartmentComponent,
     DeleteApartmentComponent,
-    CheckoutApartmentComponent
+    CheckoutApartmentComponent,
+    DLogoDirective
   ],
   imports: [
     BrowserModule,

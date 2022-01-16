@@ -15,6 +15,7 @@
     <p>{{apartment?.desc}}</p>
   </mat-card-content>
   <mat-card-content class="section">
+    <img appDLogo [roomNumber]="apartment?.room" alt="img" width="200px" />
     <p>Cena: <span class="text">${{apartment?.price}}</span></p>
   </mat-card-content>
 </mat-card>
