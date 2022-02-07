@@ -43,3 +43,9 @@ Each branch represents a year, and each folder represents a subject with their c
 2. **SE311** - Software Architecture
 3. **SE321** - Testing
 4. **SE322** - Requirements Engineering
+
+### Second semester
+1. **CS374** - Artificial Intellegence
+2. **SE325** - Software development project management
+3. **IT355** - Web Systems 2
+4. **CS323** - C/C++
