@@ -5,7 +5,8 @@
 /*
     Zadatak 4. Napisati program koji simulira bacanje kocke, tj. daje slucajan broj iz intevala[1, 6].
     Koristiti funkciju rand() iz standardne biblioteke stdlib.h
-  */
+
+*/
 
 /*
     Zadatak 16. Napisati C program koji racuna sledeci zadatak:
