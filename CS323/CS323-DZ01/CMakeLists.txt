@@ -3,4 +3,4 @@ project(CS323_DZ01 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(CS323_DZ01 main.c)
+add_executable(CS323_DZ01 zadatak04-zadatak16/main.c)
