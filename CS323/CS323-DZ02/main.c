@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int * getRandomElements()
-{
+int * getRandomElements() {
     static int arr[100000];
     int i;
 
@@ -16,8 +15,7 @@ int * getRandomElements()
     return arr;
 }
 
-int count(const int a[], const char exists[], int num_elements, int value)
-{
+int count(const int a[], const char exists[], int num_elements, int value) {
     int i, count = 0;
 
     for (i = 0; i < num_elements; ++i) {
@@ -29,8 +27,7 @@ int count(const int a[], const char exists[], int num_elements, int value)
     return (count);
 }
 
-int main(void)
-{
+int main(void) {
 
     int *p;
     int i, num_occ;
