@@ -4,7 +4,7 @@ import service.Animal;
 
 public class Sheep implements Animal {
     @Override
-    public void makeSound() {
+    public void makeSound() throws Throwable{
         System.out.println("Bwaak Bwaaaak");
     }
 
