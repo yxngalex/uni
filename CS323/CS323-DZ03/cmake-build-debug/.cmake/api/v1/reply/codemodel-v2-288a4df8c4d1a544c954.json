@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "CS323_DZ02",
+					"name" : "CS323_DZ03",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "CS323_DZ02::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-CS323_DZ02-Debug-8b3223081451e0c6f849.json",
-					"name" : "CS323_DZ02",
+					"id" : "CS323_DZ03::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CS323_DZ03-Debug-42615fccbc7a91a34c5c.json",
+					"name" : "CS323_DZ03",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/aleksa/Documents/src/repos/uni/CS323/CS323-DZ02/cmake-build-debug",
-		"source" : "/home/aleksa/Documents/src/repos/uni/CS323/CS323-DZ02"
+		"build" : "/home/aleksa/Documents/src/repos/uni/CS323/CS323-DZ03/cmake-build-debug",
+		"source" : "/home/aleksa/Documents/src/repos/uni/CS323/CS323-DZ03"
 	},
 	"version" : 
 	{

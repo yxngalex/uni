@@ -72,11 +72,11 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_CS323_DZ02: phony || CMakeFiles/CS323_DZ02.dir
 
-build CMakeFiles/CS323_DZ02.dir/zadatak16/main.c.o: C_COMPILER__CS323_DZ02_Debug /home/aleksa/Documents/src/repos/uni/CS323/CS323-DZ02/zadatak16/main.c || cmake_object_order_depends_target_CS323_DZ02
-  DEP_FILE = CMakeFiles/CS323_DZ02.dir/zadatak16/main.c.o.d
+build CMakeFiles/CS323_DZ02.dir/zadatak16-zadatak37/main.c.o: C_COMPILER__CS323_DZ02_Debug /home/aleksa/Documents/src/repos/uni/CS323/CS323-DZ02/zadatak16-zadatak37/main.c || cmake_object_order_depends_target_CS323_DZ02
+  DEP_FILE = CMakeFiles/CS323_DZ02.dir/zadatak16-zadatak37/main.c.o.d
   FLAGS = -g -std=gnu99
   OBJECT_DIR = CMakeFiles/CS323_DZ02.dir
-  OBJECT_FILE_DIR = CMakeFiles/CS323_DZ02.dir/zadatak16
+  OBJECT_FILE_DIR = CMakeFiles/CS323_DZ02.dir/zadatak16-zadatak37
 
 
 # =============================================================================
@@ -86,7 +86,7 @@ build CMakeFiles/CS323_DZ02.dir/zadatak16/main.c.o: C_COMPILER__CS323_DZ02_Debug
 #############################################
 # Link the executable CS323_DZ02
 
-build CS323_DZ02: C_EXECUTABLE_LINKER__CS323_DZ02_Debug CMakeFiles/CS323_DZ02.dir/zadatak16/main.c.o
+build CS323_DZ02: C_EXECUTABLE_LINKER__CS323_DZ02_Debug CMakeFiles/CS323_DZ02.dir/zadatak16-zadatak37/main.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/CS323_DZ02.dir
   POST_BUILD = :
