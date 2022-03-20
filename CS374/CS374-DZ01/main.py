@@ -21,11 +21,8 @@
 # SOFTWARE.
 
 
-# Zadatak 4.
-# Izmeniti A* implementaciju tako da se za svako polje odredi cena (moze se
-# slucajno generisati). Prilagoditi algoritam tako da uvazi i cenu polja
-# kada trazi najkraci put
-
+# Zadatak 5.
+# Izmeniti implementaciju A* tako da igrac moze da se krece i dijagonalno
 
 import pygame
 import math
@@ -123,7 +120,7 @@ class Cube:
 def h(p1, p2):
     x1, y1 = p1
     x2, y2 = p2
-    return abs(x1 - x2) + abs(y1 - y2)
+    return math.sqrt((abs((x1 - x2) ** 2) + abs((y1 - y2) ** 2)))
 
 
 def reconstructPath(camefrom, end, draw):
@@ -145,8 +142,6 @@ def algorithm(draw, grid, start, end):
     f_score = {cube: float("inf") for rows in grid for cube in rows}
     g_score[start] = 0
     f_score[start] = h(start.getPos(), end.getPos())
-    # cost_so_far = dict()
-    # cost_so_far[start] = 0
 
     while not openSet.empty():
         for event in pygame.event.get():
@@ -163,18 +158,14 @@ def algorithm(draw, grid, start, end):
 
         for neighbour in current.neighbours:
             tempGscore = g_score[current] + 1
-            # new_cost = cost_so_far[current] + current.cost(current, neighbour)
-            #
-            # if neighbour not in cost_so_far or new_cost < cost_so_far[neighbour]:
-            #     cost_so_far[neighbour] = new_cost
-            #     priority = new_cost
-            #     openSet.put(neighbour, priority)
-            #     cameFrom[neighbour] = current
 
             if tempGscore < g_score[neighbour]:
                 cameFrom[neighbour] = current
                 g_score[neighbour] = tempGscore
-                f_score[neighbour] = tempGscore + h(neighbour.getPos(), end.getPos())
+                # A*
+                f_score[neighbour] = tempGscore + h(end.getPos(), neighbour.getPos())
+                # Greedy BST
+                # f_score[neighbour] =  h(end.getPos(), neighbour.getPos())
                 if neighbour not in openSetHash:
                     count += 1
                     openSet.put((f_score[neighbour], count, neighbour))
