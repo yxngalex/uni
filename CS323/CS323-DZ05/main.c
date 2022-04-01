@@ -3,10 +3,16 @@
 
 #define MAX 5
 
+// 14
 // Deklarisati strukturu Automobil koja ima podatke: model, godina proizvodnje, cena,
 // pređena kilometraža. Učitati podatke o N automobila u glavnom programu. Napisati
 // funkciju koja prikazuje podatak o automobilu čija je godina proizvodnje 2000., a cena
 // najmanja.
+
+// 34
+// Napisati funkciju u kojoj se formira string s3 umetanjem stringa s2 u string s1 pocev
+// od pozicije p. Novodobijeni string s3 formirati kao dinamicki niz u okviru funkcije, a
+// zatim ga vratiti u glavni program. Testirati rad funkcije u glavnom programu.
 
 typedef struct Car {
     char model[10];
@@ -31,6 +37,8 @@ void getValues(struct Car car[]) {
     printf("The car with the lowest price is: %s \n", c.model);
     printf("And it costs: %f \n", c.price);
 }
+
+void embeddedStrings();
 
 int main() {
     int i;
@@ -63,5 +71,19 @@ int main() {
 
     getValues(car);
 
+    embeddedStrings();
+
     return 0;
+}
+
+void embeddedStrings() {
+
+    int i, p = 4;
+    char s1[p];
+    char s2[] = {'A', 'l', '\0'};
+    char s3[] = {'e', 'x', '\0'};
+
+
+    printf("%s \n", strcat(s2, s3));
+
 }
