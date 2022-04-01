@@ -3,12 +3,10 @@
 
 #define MAX 5
 
-//
 // Deklarisati strukturu Automobil koja ima podatke: model, godina proizvodnje, cena,
 // pređena kilometraža. Učitati podatke o N automobila u glavnom programu. Napisati
 // funkciju koja prikazuje podatak o automobilu čija je godina proizvodnje 2000., a cena
 // najmanja.
-//
 
 typedef struct Car {
     char model[10];
@@ -17,7 +15,22 @@ typedef struct Car {
     int mileage;
 } car;
 
-void getValues(struct Car *car[]);
+void getValues(struct Car car[]) {
+    int i;
+    struct Car c;
+    float min = 100000;
+
+    for (i = 0; i < MAX; i++) {
+        if (car[i].maintenanceYear == 2000) {
+            if (car[i].price < min) {
+                min = car[i].price;
+                c = car[i];
+            }
+        }
+    }
+    printf("The car with the lowest price is: %s \n", c.model);
+    printf("And it costs: %f \n", c.price);
+}
 
 int main() {
     int i;
@@ -48,24 +61,7 @@ int main() {
     car[3].mileage = 54321;
     car[4].mileage = 98765;
 
-        getValues((struct Car **) car);
+    getValues(car);
 
     return 0;
-}
-
-void getValues(struct Car *car[]) {
-    struct Car *c;
-
-    int i;
-    float min;
-
-    for (i = 0; i < MAX; i++) {
-        if (car[i]->maintenanceYear == 2000) {
-            if (car[i]->price < min) {
-                min = car[i]->price;
-                c = car[i];
-            }
-        }
-    }
-    printf("The car with the lowest price is: %s \n", c->model);
 }
