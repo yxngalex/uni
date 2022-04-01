@@ -1,4 +1,14 @@
 #include <stdio.h>
+#include <string.h>
+
+#define MAX 5
+
+//
+// Deklarisati strukturu Automobil koja ima podatke: model, godina proizvodnje, cena,
+// pređena kilometraža. Učitati podatke o N automobila u glavnom programu. Napisati
+// funkciju koja prikazuje podatak o automobilu čija je godina proizvodnje 2000., a cena
+// najmanja.
+//
 
 typedef struct Car {
     char model[10];
@@ -7,66 +17,55 @@ typedef struct Car {
     int mileage;
 } car;
 
-struct car *setValues(struct Car *c);
-
-void getValues(struct Car *c[]);
+void getValues(struct Car *car[]);
 
 int main() {
-    int n, i;
-    struct Car car1;
-    struct car *cList[5];
+    int i;
+    struct Car car[MAX];
 
-    printf("How many cars do you want: ");
-    scanf("%d", &n);
+    strcpy((car[0].model), "Golf 4");
+    strcpy((car[1].model), "Rx7 FD3s");
+    strcpy((car[2].model), "M3 E46");
+    strcpy((car[3].model), "R32");
+    strcpy((car[4].model), "R34");
 
-    if (n > 5) {
-        printf("Max amount of number to enter is 5");
-    } else {
 
-        for (i = 0; i < 5; ++i) {
-            cList[i] = setValues(&car1);
-        }
+    car[0].price = (float) 452.23;
+    car[1].price = (float) 1234.123;
+    car[2].price = (float) 561.43;
+    car[3].price = (float) 231.23;
+    car[4].price = (float) 123.00;
 
-        getValues((struct Car **) cList);
+    car[0].maintenanceYear = 2000;
+    car[1].maintenanceYear = 2000;
+    car[2].maintenanceYear = 2002;
+    car[3].maintenanceYear = 1999;
+    car[4].maintenanceYear = 1996;
 
-    }
+    car[0].mileage = 23401;
+    car[1].mileage = 12345;
+    car[2].mileage = 56789;
+    car[3].mileage = 54321;
+    car[4].mileage = 98765;
+
+        getValues((struct Car **) car);
+
     return 0;
 }
 
-struct car *setValues(struct Car *c) {
+void getValues(struct Car *car[]) {
+    struct Car *c;
 
     int i;
-    struct car *cList[5];
+    float min;
 
-    printf("Please enter model: ");
-    scanf("%s", &c->model);
-    printf("Please enter maintanance year: ");
-    scanf("%d", &c->maintenanceYear);
-    printf("Please enter price: ");
-    scanf("%f", &c->price);
-    printf("Please enter mileage: ");
-    scanf("%d", &c->mileage);
-
-    for (i = 0; i < 5; ++i) {
-        cList[i] = (struct car *) c;
-    }
-
-    return cList;
-}
-
-void getValues(struct Car *c[]) {
-    int i;
-    struct Car *temp;
-
-    for (i = 0; i < 5; ++i) {
-        if (temp->price > c[i]->price) {
-            temp = c[i];
-            if (c[i]->maintenanceYear == 2000) {
-                printf("Car model: %s\n", c[i]->model);
-                printf("Car price: %d\n", c[i]->price);
-                printf("Car mainteinence: %d\n", c[i]->maintenanceYear);
-                printf("Car mileage: %d\n", c[i]->mileage);
+    for (i = 0; i < MAX; i++) {
+        if (car[i]->maintenanceYear == 2000) {
+            if (car[i]->price < min) {
+                min = car[i]->price;
+                c = car[i];
             }
         }
     }
+    printf("The car with the lowest price is: %s \n", c->model);
 }

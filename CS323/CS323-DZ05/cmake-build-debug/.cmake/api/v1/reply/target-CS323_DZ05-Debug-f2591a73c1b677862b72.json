@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "CS323_DZ05.exe"
-		},
-		{
-			"path" : "CS323_DZ05.pdb"
+			"path" : "CS323_DZ05"
 		}
 	],
 	"backtrace" : 1,
@@ -71,16 +68,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "C"
 	},
 	"name" : "CS323_DZ05",
-	"nameOnDisk" : "CS323_DZ05.exe",
+	"nameOnDisk" : "CS323_DZ05",
 	"paths" : 
 	{
 		"build" : ".",
