@@ -15,3 +15,23 @@ target
 .vs
 
 __pycache__
+
+*.rar
+*.zip
+*.tar*
+
+# MS and Libre office backup
+.~*
+
+# Powerdesigner backupfiles
+~*.docx
+
+# Powerdesigner backup files
+*.oob
+*.eab
+*.rqb
+*.pjb
+
+# Visaul Paradigm backup files
+*.vpp.bak_????
+*.vpp.lck
