@@ -1,3 +1,0 @@
-/home/aleksa/Documents/src/repos/uni/CS323/CS323-DZ05/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/aleksa/Documents/src/repos/uni/CS323/CS323-DZ05/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/aleksa/Documents/src/repos/uni/CS323/CS323-DZ05/cmake-build-debug/CMakeFiles/CS323_DZ05.dir
