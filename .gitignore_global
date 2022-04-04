@@ -1,0 +1,16 @@
+.idea
+.vscode
+cmake-build-debug
+CMakeLists.txt
+
+build
+out
+cmake-build-debug
+dist
+target
+
+.idea
+.vscode
+.vs
+
+_pycache_
