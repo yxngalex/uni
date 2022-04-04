@@ -10,8 +10,6 @@ cmake-build-debug
 dist
 target
 
-.idea
-.vscode
 .vs
 
 __pycache__
