@@ -14,26 +14,25 @@ using namespace std;
 
 int main() {
     double h, w;
-    Rectangle recOne;
-    Rectangle recTwo;
+    Rectangle recOne, recTwo;
 
-    cout << "Please enter the height of a first rectangle";
+    cout << "Please enter the height of a first rectangle ";
     cin >> h;
-    cout << "Please enter the width of a first rectangle";
+    cout << "Please enter the width of a first rectangle ";
     cin >> w;
 
     recOne.setW(w);
     recOne.setH(h);
 
-    cout << "Please enter the height of a second rectangle";
+    cout << "Please enter the height of a second rectangle ";
     cin >> h;
-    cout << "Please enter the width of a second rectangle";
+    cout << "Please enter the width of a second rectangle ";
     cin >> w;
 
     recTwo.setW(w);
     recTwo.setH(h);
 
-    recOne.getArea() > recTwo.getArea() ? cout << "First has bigger area." : cout << "Second has bigger area";
+    recOne.getArea() > recTwo.getArea() ? cout << "First has bigger area." : cout << "Second has bigger area.";
 
     return 0;
 }
