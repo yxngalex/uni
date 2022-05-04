@@ -5,13 +5,9 @@
 
 void getZodiac(Personality p[]) {
     for (int i = 0; i < 4; ++i) {
-        if (p->getMonth() == "January") {
-            if (p->getDay() >= 20) {
-                cout << p->getName() << " je vodolija." << endl;
-            }
-        } else if (p->getMonth() == "February") {
-            if (p->getDay() <= 18) {
-                cout << p->getName() << endl;
+        if (p[i].getMonth() == "January" || p[i].getMonth() == "February") {
+            if (p[i].getDay() >= 20 || p[i].getDay() <= 18) {
+                cout << p[i].getName() << " je vodolija." << endl;
             }
         }
     }
@@ -35,6 +31,7 @@ int main() {
          << " " << a1.getArragementPrice() << " " << endl;
 
 
+    cout << "-------------------------" << endl;
     cout << "Problem 4" << endl;
 
     Personality p1, p2, p3, p4;
@@ -47,7 +44,7 @@ int main() {
 
     p2.setName("Marko");
     p2.setAddress("Beograd");
-    p2.setDay(5);
+    p2.setDay(21);
     p2.setMonth("January");
     p2.setYear("2003");
 
@@ -72,6 +69,8 @@ int main() {
 
 
     getZodiac(array);
+
+    cout << "-------------------------" << endl;
 
     return 0;
 }
