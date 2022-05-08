@@ -31,7 +31,6 @@ public class UserServiceImpl implements UserService {
     public List<User> getAll() {
         @SuppressWarnings("unchecked")
         TypedQuery<User> q = sessionFactory.getCurrentSession().createQuery("from User");
-        System.out.println(q);
         return q.getResultList();
     }
 

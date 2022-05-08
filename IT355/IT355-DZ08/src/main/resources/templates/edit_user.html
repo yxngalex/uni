@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <h1>Save user</h1>
-    <form action="#" th:action="@{/saveUser}" th:object="${user}" th:method="PUT">
+    <form action="#" th:action="@{/saveUser}" th:object="${user}" th:method="POST">
         <input type="hidden" th:field="*{id}">
         <input type="text" th:field="*{username}" placeholder="Username" class="form-control col-4">
         <input type="password" th:field="*{password}" placeholder="Password" class="form-control col-4">

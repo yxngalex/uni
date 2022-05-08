@@ -28,11 +28,12 @@ public class UserController {
         return "add_user";
     }
 
-    @DeleteMapping(value = "/deleteUser/{id}")
+    // Mora post mapping zbog jsp
+    @PostMapping(value = "/deleteUser/{id}")
     public String deleteUser(@PathVariable Integer id) {
         List<User> usersList = userService.getAll();
         for (User user : usersList) {
-            if (user.getId().equals(id)) {
+            if (user.getId() == id) {
                 userService.delete(user);
             }
         }
