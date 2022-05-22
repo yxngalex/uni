@@ -41,7 +41,7 @@ public class Config {
         props.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
 
         factoryBean.setHibernateProperties(props);
-        factoryBean.setAnnotatedClasses(User.class);
+        factoryBean.setPackagesToScan(new String[]{"com.metropolitan.dz08.entity"});
         return factoryBean;
     }
 
