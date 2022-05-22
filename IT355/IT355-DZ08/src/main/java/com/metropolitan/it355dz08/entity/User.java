@@ -24,6 +24,9 @@ public class User {
     @Column(name = "password", nullable = false, length = 50)
     private String password;
 
+    @Column(name = "role", nullable = false)
+    private String role;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
