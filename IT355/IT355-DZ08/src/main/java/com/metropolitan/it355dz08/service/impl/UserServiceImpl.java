@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -28,6 +29,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public List<User> getAll() {
         @SuppressWarnings("unchecked")
         TypedQuery<User> q = sessionFactory.getCurrentSession().createQuery("from User");
@@ -35,11 +37,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public void update(User user) {
         sessionFactory.getCurrentSession().saveOrUpdate(user);
     }
 
     @Override
+    @Transactional
     public void delete(User user) {
         sessionFactory.getCurrentSession().delete(user);
     }

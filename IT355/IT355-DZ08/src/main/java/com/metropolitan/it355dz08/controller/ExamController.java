@@ -3,40 +3,58 @@ package com.metropolitan.it355dz08.controller;
 import com.metropolitan.it355dz08.entity.Exam;
 import com.metropolitan.it355dz08.service.ExamService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/exam")
+@Controller
 @RequiredArgsConstructor
 public class ExamController {
 
     private final ExamService examService;
 
-    @GetMapping
-    public ResponseEntity<List<Exam>> getAllExams() {
-        return ResponseEntity.ok(examService.findAll());
+    @GetMapping("/")
+    public String getAllExams(Model model) {
+        model.addAttribute("getExams", examService.findAll());
+        return "index";
     }
 
-    @PostMapping
-    public ResponseEntity<Exam> save(@RequestBody Exam exam) {
-        return ResponseEntity.ok(examService.save(exam));
+    @GetMapping("/showNewExamForm")
+    public String showNewExamForm(Model model) {
+        Exam exam = new Exam();
+        model.addAttribute("exam", exam);
+        return "add_exam";
     }
 
-    @PutMapping
-    public ResponseEntity<Exam> update(@RequestBody Exam exam) {
-        return ResponseEntity.ok(examService.update(exam));
-    }
-
-    @DeleteMapping("/{examId}")
-    public void deleteById(@PathVariable Integer examId) {
+    @PostMapping(value = "/deleteExam/{id}")
+    public String deleteExam(@PathVariable Integer id) {
         List<Exam> examsList = examService.findAll();
         for (Exam exam : examsList) {
-            if (exam.getId() == examId) {
-                examService.delete(examId);
+            if (exam.getId() == id) {
+                examService.delete(exam);
             }
         }
+        return "redirect:/";
     }
+
+    @PostMapping("/saveExam")
+    public String saveEmployee(@ModelAttribute("exam") Exam exam) {
+        examService.update(exam);
+        return "redirect:/";
+    }
+
+    @GetMapping("/showEditExamForm/{id}")
+    public String showEditEmployeeForm(@PathVariable Integer id, Model model) {
+        List<Exam> examsList = examService.findAll();
+
+        for (Exam exam : examsList) {
+            if (exam.getId().equals(id)) {
+                model.addAttribute("exam", exam);
+            }
+        }
+        return "edit_exam";
+    }
+
 }
