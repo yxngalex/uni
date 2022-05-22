@@ -17,7 +17,7 @@ public class UserController {
 
     @GetMapping("/")
     public String viewAllUsers(Model model) {
-        model.addAttribute("listUsers", userService.getAllUsers());
+        model.addAttribute("getUsers", userService.getAllUsers());
         return "index";
     }
 
