@@ -1,19 +1,20 @@
 package com.metropolitan.it355dz08.controller;
 
 import com.metropolitan.it355dz08.entity.Exam;
-import com.metropolitan.it355dz08.service.ExamRestService;
+import com.metropolitan.it355dz08.service.ExamService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/exam")
+@RequestMapping("/exams")
 @RequiredArgsConstructor
 public class ExamRestController {
 
-    private final ExamRestService examService;
+    private final ExamService examService;
 
     @GetMapping
     public ResponseEntity<List<Exam>> getAllExams() {
@@ -35,7 +36,7 @@ public class ExamRestController {
         List<Exam> examsList = examService.findAll();
         for (Exam exam : examsList) {
             if (exam.getId() == examId) {
-                examService.delete(examId);
+                examService.delete(exam);
             }
         }
     }

@@ -1,6 +1,7 @@
 package com.metropolitan.it355dz08.service.impl;
 
 import com.metropolitan.it355dz08.entity.User;
+import com.metropolitan.it355dz08.entity.dao.UserDao;
 import com.metropolitan.it355dz08.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.SessionFactory;
@@ -10,41 +11,45 @@ import org.springframework.stereotype.Service;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import java.util.List;
+import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    private SessionFactory sessionFactory;
+    private final UserDao userDao;
 
-    @Autowired
-    public UserServiceImpl(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
+    public UserServiceImpl(UserDao userDao) {
+        this.userDao = userDao;
     }
 
-
-    @Override
-    public void add(User user) {
-        sessionFactory.getCurrentSession().save(user);
-    }
-
-    @Override
     @Transactional
-    public List<User> getAll() {
-        @SuppressWarnings("unchecked")
-        TypedQuery<User> q = sessionFactory.getCurrentSession().createQuery("from User");
-        return q.getResultList();
+    @Override
+    public User add(User user) {
+        return userDao.add(user);
     }
 
-    @Override
     @Transactional
+    @Override
+    public List<User> getAllUsers() {
+        return userDao.getAllUsers();
+    }
+
+    @Transactional
+    @Override
+    public User getUserByUsername(String username) {
+        return userDao.getUserByUsername(username);
+    }
+
+    @Transactional
+    @Override
     public void update(User user) {
-        sessionFactory.getCurrentSession().saveOrUpdate(user);
+        userDao.update(user);
     }
 
-    @Override
     @Transactional
+    @Override
     public void delete(User user) {
-        sessionFactory.getCurrentSession().delete(user);
+        userDao.delete(user);
     }
 }

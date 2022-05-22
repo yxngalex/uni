@@ -16,24 +16,23 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/")
-    public String getAllUsers(Model model) {
-        model.addAttribute("getUsers", userService.getAll());
+    public String viewAllUsers(Model model) {
+        model.addAttribute("listUsers", userService.getAllUsers());
         return "index";
     }
 
     @GetMapping("/showNewUserForm")
-    public String showNewUserForm(Model model) {
+    public String showNewUserForm(Model model){
         User user = new User();
         model.addAttribute("user", user);
-        return "add_user";
+        return "new_user";
     }
 
-    // Mora post mapping zbog jsp
     @PostMapping(value = "/deleteUser/{id}")
-    public String deleteUser(@PathVariable Integer id) {
-        List<User> usersList = userService.getAll();
-        for (User user : usersList) {
-            if (user.getId() == id) {
+    public String deleteUser(@PathVariable Integer id){
+        List<User> usersList = userService.getAllUsers();
+        for(User user : usersList){
+            if(user.getId() == id){
                 userService.delete(user);
             }
         }
@@ -41,21 +40,20 @@ public class UserController {
     }
 
     @PostMapping("/saveUser")
-    public String saveEmployee(@ModelAttribute("user") User user) {
+    public String saveEmployee(@ModelAttribute("user") User user){
         userService.update(user);
         return "redirect:/";
     }
 
     @GetMapping("/showEditUserForm/{id}")
-    public String showEditEmployeeForm(@PathVariable Integer id, Model model) {
-        List<User> usersList = userService.getAll();
+    public String showEditEmployeeForm(@PathVariable Integer id, Model model){
+        List<User> usersList = userService.getAllUsers();
 
-        for (User user : usersList) {
-            if (user.getId().equals(id)) {
+        for(User user : usersList){
+            if(user.getId() == id){
                 model.addAttribute("user", user);
             }
         }
         return "edit_user";
     }
-
 }
