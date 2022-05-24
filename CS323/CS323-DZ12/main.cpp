@@ -77,7 +77,7 @@ int main() {
     l5.setDatumRodj("25 Novembar");
     l5.setImeZavrsenogFakulteta("Univerzitet Metropolitan");
 
-//    it = find(v.begin(), v.end(), O1);
+    it = find(v.begin(), v.end(), O1);
     if (it != v.end())
     {
         cout << "Objekat je pronadjen" << endl;
