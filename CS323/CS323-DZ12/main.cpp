@@ -6,23 +6,6 @@
 #include <stack>
 #include <algorithm>
 
-//void printStack(stack<int> s)
-//{
-//    if (s.empty())
-//        return;
-//
-//
-//    int x = s.top();
-//
-//    s.pop();
-//
-//    printStack(s);
-//
-//    cout << x << " ";
-//
-//    s.push(x);
-//}
-
 int main() {
     Lekar l1, l2, l3, l4, l5, l6, O1;
 
@@ -138,8 +121,10 @@ int main() {
         st.push(l);
     }
 
+    cout << "Stampa se inverzno stek:" << endl;
+
     while (!st.empty()) {
-        cout << "Stampa se inverzno stek: " << st.top() << endl;
+        cout << "Stek: " << st.top() << endl;
         st.pop();
     }
 
