@@ -16,4 +16,6 @@ public:
     void infoLekar();
 
     bool operator==(const Lekar& l);
+
+    friend ostream& operator<<(ostream& out, const Lekar& l);
  };

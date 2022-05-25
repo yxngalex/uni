@@ -32,3 +32,10 @@ bool Lekar::operator==(const Lekar &l) {
     }
     return false;
 }
+
+ostream& operator<<(ostream &out, const Lekar &l) {
+    out << l.ime << " " << l.prezime << " " << l.adresa << " " << l.godiste << " " << l.datumRodj << " "
+        << l.imeZavrsenogFakulteta << endl;
+    return out;
+
+}

@@ -6,6 +6,23 @@
 #include <stack>
 #include <algorithm>
 
+//void printStack(stack<int> s)
+//{
+//    if (s.empty())
+//        return;
+//
+//
+//    int x = s.top();
+//
+//    s.pop();
+//
+//    printStack(s);
+//
+//    cout << x << " ";
+//
+//    s.push(x);
+//}
+
 int main() {
     Lekar l1, l2, l3, l4, l5, l6, O1;
 
@@ -78,27 +95,21 @@ int main() {
     l5.setImeZavrsenogFakulteta("Univerzitet Metropolitan");
 
     it = find(v.begin(), v.end(), O1);
-    if (it != v.end())
-    {
+    if (it != v.end()) {
         cout << "Objekat je pronadjen" << endl;
-    }
-    else {
+    } else {
         cout << "Objekat nije pronadjen" << endl;
     }
 
     cout << endl;
 
-    ofstream output;
-    ifstream input;
-    output.open("ulaz.txt");
     int n;
     stack<Lekar> st;
 
-    cout << "Unesite broj elemenata za upis u ulaz.txt" << endl;
+    cout << "Unesite broj elemenata za upis lekara u stek" << endl;
     cin >> n;
 
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         Lekar l;
         string s;
 
@@ -124,32 +135,11 @@ int main() {
         cin >> s;
         l.setImeZavrsenogFakulteta(s);
 
-        output << l.getIme() << " " << l.getPrezime() << " " << l.getAdresa() << " " << l.getTelefon() << l.getGodiste() << l.getDatumRodj() << l.getImeZavrsenogFakulteta() << endl;
-    }
-
-    output.close();
-
-    input.open("ulaz.txt");
-    string ime, prezime, adresa, telefon, godiste, datumRodj, imeZavFakulteta;
-
-    while (input >> ime >> prezime >> adresa >> telefon >> godiste >> datumRodj >> imeZavFakulteta) {
-        Lekar l;
-        l.setIme(ime);
-        l.setPrezime(prezime);
-        l.setAdresa(adresa);
-        l.setTelefon(telefon);
-        l.setGodiste(godiste);
-        l.setDatumRodj(datumRodj);
-        l.setImeZavrsenogFakulteta(imeZavFakulteta);
         st.push(l);
     }
 
-    input.close();
-
-    output.open("izlaz.txt");
-
     while (!st.empty()) {
-        output << st.top().getIme() << " " << st.top().getPrezime() << " " << st.top().getAdresa() << " " << st.top().getTelefon() << " " << st.top().getGodiste() << " " << st.top().getDatumRodj() << " " << st.top().getImeZavrsenogFakulteta() << endl;
+        cout << "Stampa se inverzno stek: " << st.top() << endl;
         st.pop();
     }
 
