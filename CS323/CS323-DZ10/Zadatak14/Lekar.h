@@ -15,7 +15,5 @@ public:
 	string getImeZavrsenogFakulteta() const;
 	void infoLekar();
 
-	bool operator==(const Lekar& l);
-
 };
 
