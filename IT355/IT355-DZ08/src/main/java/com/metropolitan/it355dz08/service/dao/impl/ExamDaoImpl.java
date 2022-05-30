@@ -1,9 +1,8 @@
-package com.metropolitan.it355dz08.entity.dao.impl;
+package com.metropolitan.it355dz08.service.dao.impl;
 
 import com.metropolitan.it355dz08.entity.Exam;
-import com.metropolitan.it355dz08.entity.dao.ExamDao;
+import com.metropolitan.it355dz08.service.dao.ExamDao;
 import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.TypedQuery;
@@ -11,8 +10,11 @@ import java.util.List;
 
 @Repository
 public class ExamDaoImpl implements ExamDao {
-    @Autowired
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
+
+    public ExamDaoImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     @Override
     public List<Exam> findAll() {

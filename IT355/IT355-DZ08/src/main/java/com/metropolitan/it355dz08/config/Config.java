@@ -30,19 +30,19 @@ public class Config {
         return dataSource;
     }
 
-    @Bean
+    @Bean(name = "entityManagerFactory")
     public LocalSessionFactoryBean getSessionFactory() {
-        LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
-        factoryBean.setDataSource(getDataSource());
+        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+        sessionFactory.setDataSource(getDataSource());
 
         Properties props = new Properties();
         props.put("hibernate.show_sql", "true");
         props.put("hibernate.hbm2ddl.auto", "update");
         props.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
 
-        factoryBean.setHibernateProperties(props);
-        factoryBean.setPackagesToScan(new String[]{"com.metropolitan.dz08.entity"});
-        return factoryBean;
+        sessionFactory.setHibernateProperties(props);
+        sessionFactory.setPackagesToScan(new String[]{"com.metropolitan.it355dz08.entity"});
+        return sessionFactory;
     }
 
     @Bean

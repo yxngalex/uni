@@ -1,6 +1,6 @@
-package com.metropolitan.it355dz08.entity.dao.impl;
+package com.metropolitan.it355dz08.service.dao.impl;
 import com.metropolitan.it355dz08.entity.User;
-import com.metropolitan.it355dz08.entity.dao.UserDao;
+import com.metropolitan.it355dz08.service.dao.UserDao;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 

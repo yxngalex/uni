@@ -25,7 +25,7 @@ public class UserController {
     public String showNewUserForm(Model model){
         User user = new User();
         model.addAttribute("user", user);
-        return "new_user";
+        return "add_user";
     }
 
     @PostMapping(value = "/deleteUser/{id}")
@@ -40,7 +40,7 @@ public class UserController {
     }
 
     @PostMapping("/saveUser")
-    public String saveEmployee(@ModelAttribute("user") User user){
+    public String saveUser(@ModelAttribute("user") User user){
         userService.update(user);
         return "redirect:/";
     }

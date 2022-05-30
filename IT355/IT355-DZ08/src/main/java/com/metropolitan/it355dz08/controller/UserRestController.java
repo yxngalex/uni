@@ -9,22 +9,22 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/rest-user")
 @RequiredArgsConstructor
 public class UserRestController {
     private final UserService userService;
 
-    @GetMapping
+    @GetMapping()
     public ResponseEntity<List<User>> getAllUsers(){
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<User> save(@RequestBody User user){
         return ResponseEntity.ok(userService.add(user));
     }
 
-    @PutMapping
+    @PutMapping()
     public ResponseEntity<User> update(@RequestBody User user){
         return ResponseEntity.ok(userService.add(user));
     }

@@ -8,10 +8,12 @@
 </head>
 <body>
 <div class="container">
+    <a class="btn btn-secondary" href="http://localhost:8080/logout">Logout</a>
     <h1>Save user</h1>
-    <form action="#" th:action="@{/saveUser}" th:object="${user}" th:method="POST">
-        <input type="text" th:field="*{username}" placeholder="Username" class="form-control col-4">
-        <input type="password" th:field="*{password}" placeholder="Password" class="form-control col-4">
+    <form action="#" th:action="@{/saveUser}" th:object="${user}" th:method ="POST">
+        <input type="text" th:field="*{username}" placeholder="First name" class="form-control col-4">
+        <input type="text" th:field="*{password}" placeholder="Last name" class="form-control col-4">
+        <input type="text" th:field="*{role}" placeholder="Role" class="form-control col-4">
         <button type="submit" class="btn btn-info col-2">Save</button>
     </form>
 </div>

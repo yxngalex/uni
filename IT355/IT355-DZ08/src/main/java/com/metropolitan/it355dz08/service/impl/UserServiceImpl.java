@@ -1,27 +1,19 @@
 package com.metropolitan.it355dz08.service.impl;
 
 import com.metropolitan.it355dz08.entity.User;
-import com.metropolitan.it355dz08.entity.dao.UserDao;
+import com.metropolitan.it355dz08.service.dao.UserDao;
 import com.metropolitan.it355dz08.service.UserService;
-import lombok.RequiredArgsConstructor;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.TypedQuery;
-import javax.transaction.Transactional;
-import java.util.List;
 import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final UserDao userDao;
-
-    public UserServiceImpl(UserDao userDao) {
-        this.userDao = userDao;
-    }
+    @Autowired
+    private UserDao userDao;
 
     @Transactional
     @Override

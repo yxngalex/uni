@@ -10,23 +10,23 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/exams")
+@RequestMapping("/rest-exam")
 @RequiredArgsConstructor
 public class ExamRestController {
 
     private final ExamService examService;
 
-    @GetMapping
+    @GetMapping()
     public ResponseEntity<List<Exam>> getAllExams() {
         return ResponseEntity.ok(examService.findAll());
     }
 
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<Exam> save(@RequestBody Exam exam) {
         return ResponseEntity.ok(examService.save(exam));
     }
 
-    @PutMapping
+    @PutMapping()
     public ResponseEntity<Exam> update(@RequestBody Exam exam) {
         return ResponseEntity.ok(examService.update(exam));
     }

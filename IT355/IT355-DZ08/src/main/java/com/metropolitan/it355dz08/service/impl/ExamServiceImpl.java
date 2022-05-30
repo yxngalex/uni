@@ -1,28 +1,18 @@
 package com.metropolitan.it355dz08.service.impl;
 
 import com.metropolitan.it355dz08.entity.Exam;
-import com.metropolitan.it355dz08.entity.dao.ExamDao;
+import com.metropolitan.it355dz08.service.dao.ExamDao;
 import com.metropolitan.it355dz08.service.ExamService;
-import lombok.RequiredArgsConstructor;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.persistence.TypedQuery;
-import javax.transaction.Transactional;
-import java.util.List;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
 public class ExamServiceImpl implements ExamService {
-
-    private final ExamDao examDao;
-
-    public ExamServiceImpl(ExamDao examDao) {
-        this.examDao = examDao;
-    }
+    @Autowired
+    private ExamDao examDao;
 
     @Transactional
     @Override

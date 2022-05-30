@@ -1,4 +1,4 @@
-package com.metropolitan.it355dz08.entity.dao;
+package com.metropolitan.it355dz08.service.dao;
 
 import com.metropolitan.it355dz08.entity.Exam;
 

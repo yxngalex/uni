@@ -15,7 +15,7 @@ public class ExamController {
 
     private final ExamService examService;
 
-    @GetMapping("/")
+    @GetMapping("/exam")
     public String getAllExams(Model model) {
         model.addAttribute("getExams", examService.findAll());
         return "index";
