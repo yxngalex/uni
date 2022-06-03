@@ -1,4 +1,5 @@
 # genetic algorithm search for continuous function optimization
+import numpy as np
 from numpy.random import randint
 from numpy.random import rand
 
@@ -28,14 +29,24 @@ def decode(bounds, n_bits, bitstring):
 
 
 # tournament selection
-def selection(pop, scores, k=3):
-    # first random selection
-    selection_ix = randint(len(pop))
-    for ix in randint(0, len(pop), k - 1):
-        # check if better (e.g. perform a tournament)
-        if scores[ix] < scores[selection_ix]:
-            selection_ix = ix
-    return pop[selection_ix]
+# def selection(pop, scores, k=3):
+#     # first random selection
+#     selection_ix = randint(len(pop))
+#     for ix in randint(0, len(pop), k - 1):
+#         # check if better (e.g. perform a tournament)
+#         if scores[ix] < scores[selection_ix]:
+#             selection_ix = ix
+#     return pop[selection_ix]
+
+
+def selection(population: int, n_population: int):
+    population_fitness = sum(objective(chromosome) for chromosome in population)
+
+    chromosome_probabilities = [objective(chromosome) / population_fitness for chromosome in population]
+
+    rnd = np.random.choice(n_population, p=chromosome_probabilities)
+
+    return population[rnd]
 
 
 # crossover two parents to create two children
@@ -50,7 +61,6 @@ def crossover(p1, p2, r_cross):
         c1 = p1[:pt] + p2[pt:]
         c2 = p2[:pt] + p1[pt:]
     return [c1, c2]
-
 
 # mutation operator
 def mutation(bitstring, r_mut):
@@ -79,9 +89,9 @@ def genetic_algorithm(objective, bounds, n_bits, n_iter, n_pop, r_cross, r_mut):
                 best, best_eval = pop[i], scores[i]
                 print(">%d, new best f(%s) = %f" % (gen, decoded[i], scores[i]))
 
-        
         # select parents
-        selected = [selection(pop, scores) for _ in range(n_pop)]
+        # selected = [selection(pop, scores) for _ in range(n_pop)]
+        selected: list = [selection(pop, n_pop) for _ in range(n_pop)]
         # create the next generation
         children = list()
         for i in range(0, n_pop, 2):
