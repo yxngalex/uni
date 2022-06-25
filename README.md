@@ -16,7 +16,7 @@ Each branch represents a year, and each folder represents a subject with their c
 
 1. **CS102** - Abstract Data Types and Objects
 2. **IT210** - IT systems
-3. **CS115** - Discrete Mathematics Structures
+3. **CS115** - Discrete Structures
 4. **NT112** - English 2
 
 ## Second year
@@ -34,3 +34,18 @@ Each branch represents a year, and each folder represents a subject with their c
 2. **IT370** - Human-computer interaction
 3. **SE211** - Software Construction
 4. **MA202** - Mathematics 2
+
+## Third year
+
+### First semester
+
+1. **IT255** - Web Systems 1
+2. **SE311** - Software Architecture
+3. **SE321** - Testing
+4. **SE322** - Requirements Engineering
+
+### Second semester
+1. **CS374** - Artificial Intellegence
+2. **SE325** - Software development project management
+3. **IT355** - Web Systems 2
+4. **CS323** - C/C++

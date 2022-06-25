@@ -1,0 +1,81 @@
+* {
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+.header {
+    text-align: center;
+}
+
+.navigation {
+    text-align: center;
+    margin: 3em 0;
+    border: 2px solid deepskyblue;
+    height: 85%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.links {
+    display: block;
+    padding: 8px 8px 8px 32px;
+}
+
+li {
+    margin-top: 1em;
+    font-size: 22px;
+
+}
+
+.section {
+    border: 2px solid aquamarine;
+    float: left;
+    min-height: 70%;
+    margin-top: 0.8em;
+    margin-left: 10em;
+    width: 86%;
+}
+
+.inner-header {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.article {
+    border: 2px solid blueviolet;
+    float: left;
+    width: 50%;
+    height: 65.4vh;
+}
+
+.dog-image {
+    position: absolute;
+    top: 35%;
+    left: 17%;
+}
+
+.aside {
+    border: 2px solid crimson;
+    float: left;
+    width: 49%;
+    text-align: center;
+    padding: 1.6em 0;
+    height: 60vh;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 85%;
+    height: 6%;
+    text-align: center;
+    border: 2px solid orange;
+    font-size: 12px;
+    margin-left: 13em;
+}

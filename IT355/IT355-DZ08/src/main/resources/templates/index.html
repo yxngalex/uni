@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>IT335 - DZ08</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+<a class="btn btn-primary" th:href = "@{/showNewUserForm}">+ Add New User </a>
+<a class="btn btn-secondary" href="logout">Logout</a>
+<table class="table table-striped table-responsive-md">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Password</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${getUsers}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.password}"></td>
+        <td><a th:href="@{/showEditUserForm/{id}(id=${user.id})}" class="btn btn-primary">Edit</a></td>
+        <td>
+            <form method="POST" th:action="@{/deleteUser/{id}(id=${user.id})}">
+                <button type="submit" name="submit" value="value" class="btn btn-danger">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

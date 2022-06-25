@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>All exams</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+<table class="table table-striped table-responsive-md">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Picked</th>
+        <th>Scheduled</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="exam :  ${listExams}">
+        <td th:text="${exam.name}"></td>
+        <td th:text="${exam.picked}"></td>
+        <td><a th:href="@{/saveChanges/{id}(id=${exam.id})}" class="btn btn-primary">Schedule/Un schedule exam</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

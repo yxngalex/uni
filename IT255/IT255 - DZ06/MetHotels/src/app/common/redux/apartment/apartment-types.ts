@@ -1,0 +1,4 @@
+export const ApartmentActionTypes = {
+  ADD_APARTMENT: "[APARTMENT] ADD_APARTMENT",
+  REMOVE_APARTMENT: "[APARTMENT] REMOVE_APARTMENT"
+};

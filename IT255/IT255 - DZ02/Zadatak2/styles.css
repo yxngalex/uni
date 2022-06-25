@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+.background-color {
+    position: absolute;
+    width: 100%;
+    min-height: 650px;
+    background: linear-gradient(180deg, #33ccff, #ff99cc);
+}
+
+.header {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header > .logo {
+    color: white;
+    margin-left: 2em;
+    z-index: 50000;
+}
+
+.header > .sign-up-btn {
+    margin-right: 2em;
+    margin-top: .5em;
+    z-index: 50000;
+}
+
+ul {
+    display: inline-flex;
+    margin-top: .5em;
+    z-index: 50000;
+}
+
+li {
+    margin-right: 2em;
+    z-index: 50000;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "phone text";
+    position: relative;
+}
+
+.phone {
+    position: relative;
+    grid-template: "phone";
+    top: 170px;
+    left: 86px;
+    width: 700px;
+    height: 600px;
+}
+
+.text {
+    grid-template: "text";
+    position: relative;
+    top: 20em;
+    text-align: center;
+    right: 8em;
+    height: auto;
+}
+
+.footer {
+    position: relative;
+    top: 15em;
+    text-align: center;
+}

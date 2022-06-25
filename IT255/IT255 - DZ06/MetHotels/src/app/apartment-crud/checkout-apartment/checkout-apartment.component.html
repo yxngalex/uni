@@ -1,0 +1,19 @@
+<h2 matDialogTitle>Unesite koliko dana želite da odsedate:</h2>
+<form [formGroup]="form">
+  <mat-form-field>
+    <mat-select formControlName="numOfNights">
+      <mat-label>Broj noći:</mat-label>
+      <mat-option value=1>1</mat-option>
+      <mat-option value=2>2</mat-option>
+      <mat-option value=3>3</mat-option>
+      <mat-option value=4>4</mat-option>
+      <mat-option value=5>5</mat-option>
+      <mat-option value=6>6</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+<mat-dialog-actions align="end">
+  <button color="warn" mat-button mat-dialog-close="true">Ne</button>
+  <button color="primary" mat-button (click)="save()">Da
+  </button>
+</mat-dialog-actions>

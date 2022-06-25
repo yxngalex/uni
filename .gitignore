@@ -1,0 +1,50 @@
+node_modules
+.idea
+.vscode
+cmake-build-debug
+CMakeLists.txt
+
+build
+out
+cmake-build-debug
+dist
+target
+
+.idea
+.vscode
+.vs
+
+__pycache__
+
+*.rar
+*.zip
+*.tar*
+
+# MS and Libre office backup
+.~*
+
+# Powerdesigner backupfiles
+~*.docx
+
+# Powerdesigner backup files
+*.oob
+*.eab
+*.rqb
+*.pjb
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Mono auto generated files
+mono_crash.*
+
+# Visaul Paradigm backup files
+*.vpp.bak_????
+*.vpp.lck

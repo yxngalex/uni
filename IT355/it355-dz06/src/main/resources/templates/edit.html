@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Picked exam</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+<table class="table table-striped table-responsive-md">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Change schedule</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <form action="#" th:action="@{/saveEdited}" th:object="${exam}" th:method ="POST">
+            <input type="hidden" th:field="*{id}">
+            <td><input type="text" readonly th:field="*{name}" placeholder="Name" class="form-control col-4"></td>
+            <td>
+                <select class="form-control col-4" th:field="*{picked}">
+                    <option th:value="'True'" th:text="true"></option>
+                    <option th:value="'False'" th:text="false"></option>
+                </select>
+            </td>
+            <td><button type="submit" class="btn btn-info col-2">Save change</button></td>
+        </form>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
