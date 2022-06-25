@@ -39,14 +39,14 @@ def decode(bounds, n_bits, bitstring):
 #     return pop[selection_ix]
 
 
-def selection(population: int, n_population: int):
-    population_fitness = sum(objective(chromosome) for chromosome in population)
+def selection(pop: int, n_pop: int):
+    pop_fit = sum(objective(chromosome) for chromosome in pop)
 
-    chromosome_probabilities = [objective(chromosome) / population_fitness for chromosome in population]
+    probabilities = [objective(chromosome) / pop_fit for chromosome in pop]
 
-    rnd = np.random.choice(n_population, p=chromosome_probabilities)
+    rnd = np.random.choice(n_pop, p=probabilities)
 
-    return population[rnd]
+    return pop[rnd]
 
 
 # crossover two parents to create two children
