@@ -16,7 +16,7 @@ Made for back-up and presentation purposes.
 
 ### First semester
 
-1. [**CS101** - Basics of Object-oriented programming](https://github.com/yxngalex/uni/tree/master/CS101)
+1. [**CS101** - Basics of OOP](https://github.com/yxngalex/uni/tree/master/CS101)
 2. [**IT101** - Basics of Informational Technologies](https://github.com/yxngalex/uni/tree/master/IT101)
 3. [**MA101** - Mathematics 1](#)
 4. [**NT111** - English 1](https://github.com/yxngalex/uni/tree/master/NT111)
