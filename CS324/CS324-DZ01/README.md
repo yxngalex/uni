@@ -34,3 +34,5 @@ Glavna razlika je u sintaksi. Python je dosta sličan jeziku čoveka, nije strik
 od programera da se pridržava strategiji za učitavanje biblioteka kao što zahteva programski jezik C. 
 Ono što je pisano u C-u, u pythonu je napisano u 3 linije koda. Pored toga, glavna logika je slična.
 
+Program je kompajlovan online [kompajlerom](https://www.onlinegdb.com/online_c_compiler).
+
