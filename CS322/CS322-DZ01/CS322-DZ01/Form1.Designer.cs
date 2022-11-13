@@ -35,6 +35,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.errorLab = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -95,12 +96,23 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Unesi";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // errorLab
+            // 
+            this.errorLab.AutoSize = true;
+            this.errorLab.Location = new System.Drawing.Point(243, 239);
+            this.errorLab.Name = "errorLab";
+            this.errorLab.Size = new System.Drawing.Size(0, 15);
+            this.errorLab.TabIndex = 7;
+            this.errorLab.Click += new System.EventHandler(this.label4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.errorLab);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -124,5 +136,6 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private Button button1;
+        private Label errorLab;
     }
 }
