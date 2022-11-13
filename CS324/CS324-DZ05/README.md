@@ -3,10 +3,13 @@
 Napraviti klasu dokument sa osobinama ime i broj reči. Izvesti klasu knjiga koja ima dodatne osobine autor, žanr, godina
 izdavanja.
 
+
 Instancirati 10 knjiga. Napraviti imenik koji će kao ključ imati broj knjige (počevši od lib001) a kao vrednost knjigu.
 Štampati sve knjige u formatu:
 
+
 < broj knjige: žanr, autor, naziv.>
+
 
 # Zadatak #2
 
