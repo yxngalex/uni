@@ -25,5 +25,10 @@ def main():
         print(fibonacci_ite(i), end=", ")
 
 
+# Sličnosti su u tome što je rezultat potpuno isti.
+# Razlike između ova dva pristupa za prikaz fibonačijevog niza jesu u tome što kod rekurzivnog pristupa kod je manji i
+# čitljiviji, ali zato zauzima više memorije i vremena procesora zbog čestih poziva funkcija nego kod iterativnog
+# pristupa.
+
 if __name__ == "__main__":
     main()
