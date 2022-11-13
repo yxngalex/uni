@@ -24,8 +24,8 @@ class Student(Person):
 
 
 def main():
-    s1 = Student("Aleksa", "Cekic", 4173, "Software Engineer", {"CS324": 10})
-    s2 = Student("Uros", "Milovanovic", 4191, "Software Engineer", {"CS324": 10})
+    s1 = Student("Aleksa", "Cekić", 4173, "Software Engineer", {"CS324": 10})
+    s2 = Student("Uros", "Milovanović", 4191, "Software Engineer", {"CS324": 10})
 
     print("Student {} and student {} do{} have the same major".format(s1.name, s2.name,
                                                                       "" if s1.curriculum(s2) else " not"))
