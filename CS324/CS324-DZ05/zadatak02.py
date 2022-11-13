@@ -25,13 +25,13 @@ class Student(Person):
 
 def main():
     s1 = Student("Aleksa", "Cekić", 4173, "Software Engineer", {"CS324": 10})
-    s2 = Student("Uros", "Milovanović", 4191, "Software Engineer", {"CS324": 10})
+    s2 = Student("Stefan", "Stefanović", 1234, "Software Engineer", {"CS324": 10, "CS101": 9})
 
     print("Student {} and student {} do{} have the same major".format(s1.name, s2.name,
                                                                       "" if s1.curriculum(s2) else " not"))
     print("Student {} has passed {} exam(s) ".format(s1.name, len(s1.exams())))
 
-    print("Student {} has passed {} exam(s) ".format(s2.name, len(s1.exams())))
+    print("Student {} has passed {} exam(s) ".format(s2.name, len(s2.exams())))
 
     print("Both students{} have common passed exams: {}".format("" if len(s1.common_exams(s2)) > 0 else " don't",
                                                                 s1.common_exams(s2)))
