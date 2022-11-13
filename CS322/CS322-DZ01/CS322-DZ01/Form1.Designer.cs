@@ -36,6 +36,10 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.errorLab = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.color_red = new System.Windows.Forms.Button();
+            this.color_green = new System.Windows.Forms.Button();
+            this.hidden_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -107,11 +111,55 @@
             this.errorLab.TabIndex = 7;
             this.errorLab.Click += new System.EventHandler(this.label4_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(426, 45);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 33);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Hide Label";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // color_red
+            // 
+            this.color_red.Location = new System.Drawing.Point(455, 372);
+            this.color_red.Name = "color_red";
+            this.color_red.Size = new System.Drawing.Size(75, 23);
+            this.color_red.TabIndex = 9;
+            this.color_red.Text = "Red";
+            this.color_red.UseVisualStyleBackColor = true;
+            this.color_red.Click += new System.EventHandler(this.color_red_Click);
+            // 
+            // color_green
+            // 
+            this.color_green.Location = new System.Drawing.Point(363, 372);
+            this.color_green.Name = "color_green";
+            this.color_green.Size = new System.Drawing.Size(75, 23);
+            this.color_green.TabIndex = 10;
+            this.color_green.Text = "Green";
+            this.color_green.UseVisualStyleBackColor = true;
+            this.color_green.Click += new System.EventHandler(this.color_green_Click);
+            // 
+            // hidden_label
+            // 
+            this.hidden_label.AutoSize = true;
+            this.hidden_label.Location = new System.Drawing.Point(262, 54);
+            this.hidden_label.Name = "hidden_label";
+            this.hidden_label.Size = new System.Drawing.Size(77, 15);
+            this.hidden_label.TabIndex = 11;
+            this.hidden_label.Text = "Lorem Ipsum";
+            this.hidden_label.Click += new System.EventHandler(this.label4_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.hidden_label);
+            this.Controls.Add(this.color_green);
+            this.Controls.Add(this.color_red);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.errorLab);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
@@ -137,5 +185,9 @@
         private TextBox textBox3;
         private Button button1;
         private Label errorLab;
+        private Button button2;
+        private Button color_red;
+        private Button color_green;
+        private Label hidden_label;
     }
 }

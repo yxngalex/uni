@@ -52,5 +52,25 @@ namespace CS322_DZ01
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            hidden_label.Text = "";
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void color_green_Click(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.Color.Green;
+        }
+
+        private void color_red_Click(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.Color.Red;
+        }
     }
 }
