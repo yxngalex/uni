@@ -1,0 +1,17 @@
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\bin\Debug\net6.0-windows\CS322-DZ10.exe
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\bin\Debug\net6.0-windows\CS322-DZ10.deps.json
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\bin\Debug\net6.0-windows\CS322-DZ10.runtimeconfig.json
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\bin\Debug\net6.0-windows\CS322-DZ10.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\bin\Debug\net6.0-windows\CS322-DZ10.pdb
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\CS322-DZ10.csproj.AssemblyReference.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\CS322_DZ10.Form1.resources
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\CS322-DZ10.csproj.GenerateResource.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\CS322-DZ10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\CS322-DZ10.AssemblyInfoInputs.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\CS322-DZ10.AssemblyInfo.cs
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\CS322-DZ10.csproj.CoreCompileInputs.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\CS322-DZ10.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\refint\CS322-DZ10.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\CS322-DZ10.pdb
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\CS322-DZ10.genruntimeconfig.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ10\CS322-DZ10\obj\Debug\net6.0-windows\ref\CS322-DZ10.dll
