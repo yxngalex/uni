@@ -11,6 +11,7 @@ def average(items: List[Union[int, float]]):
 
 
 def main():
+    # Check in method
     print(average([1, 2.2, 3, 4.1]))
     try:
         print(average([1, 'a', 3, 4.4]))
