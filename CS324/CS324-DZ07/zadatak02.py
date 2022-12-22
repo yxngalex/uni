@@ -18,10 +18,10 @@ def main():
     cursor = conn.cursor()
     ddl = """
         CREATE TABLE IF NOT EXISTS predmeti (
-            sifra varchar(16) PRIMARY KEY,
-            punoIme varchar(64) NOT NULL,
-            profesor varchar(64) NOT NULL,
-            godinaStudiranja int NOT NULL
+            sifra VARCHAR(16) PRIMARY KEY,
+            punoIme VARCHAR(64) NOT NULL,
+            profesor VARCHAR(64) NOT NULL,
+            godinaStudiranja INT NOT NULL
         );
     """
 
