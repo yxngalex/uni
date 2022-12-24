@@ -8,29 +8,23 @@ def main():
         grade = int(input("Uneti ocenu: "))
         if 5 < grade <= 10:
             grades.append(grade)
-
-        print("Prosek: " + str(average(grades)))
+            print("Prosek: " + str(average(grades)))
 
         if grade == 0:
             break
 
-    plt.plot(range(1, len(grades) + 1), grades, 'o', label='Ocene')
-    plt.plot(range(1, len(grades) + 1),
-             average(grades), '>--', label='Prosek ocena')
+    plt.plot(range(len(grades)), average(grades), 'o', label='Ocene')
     plt.legend()
     plt.grid()
     plt.show()
 
-    # plt.pie(grades)
-    # plt.legend()
-    # plt.show()
+    plt.pie(grades)
+    plt.legend()
+    plt.show()
 
 
 def average(grades):
-    s = 0
-    for grade in grades:
-        s += grade
-    return s / len(grades)
+    return [sum(grades[0:x + 1]) / (x + 1) for x in range(len(grades))]
 
 
 if __name__ == '__main__':
