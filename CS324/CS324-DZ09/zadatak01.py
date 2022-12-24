@@ -10,6 +10,7 @@ def main():
             grades.append(grade)
             print("Prosek: " + str(average(grades)))
 
+        # Dodao sam 0 da bi mogao da izadje iz petlje
         if grade == 0:
             break
 
