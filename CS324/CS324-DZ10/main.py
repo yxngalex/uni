@@ -4,7 +4,7 @@ from collections import Counter
 
 
 def main():
-    input_data()
+    #input_data()
     data = pd.read_csv("Student_izvestaj.csv")
 
     counted = Counter(data["Ocena"])
