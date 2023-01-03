@@ -89,6 +89,7 @@ namespace CS322_PZ
                     {
                         // Go to Admin page
                         AdminForm adminpage = new AdminForm();
+                        adminpage.Username = user.Username;
                         this.Hide();
                         adminpage.ShowDialog();
                         this.Close();

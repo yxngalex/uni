@@ -25,3 +25,4 @@ C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-PZ\CS322-PZ\obj\Debug\net6.0-windows
 C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-PZ\CS322-PZ\obj\Debug\net6.0-windows\ref\CS322-PZ.dll
 C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-PZ\CS322-PZ\obj\Debug\net6.0-windows\CS322_PZ.AdminForm.resources
 C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-PZ\CS322-PZ\obj\Debug\net6.0-windows\CS322_PZ.ProductsForm.resources
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-PZ\CS322-PZ\obj\Debug\net6.0-windows\CS322_PZ.AddNewProductForm.resources

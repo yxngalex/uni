@@ -22,5 +22,13 @@ namespace CS322_PZ
         {
             label1.Text = userId.ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
+        }
     }
 }
