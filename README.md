@@ -1,6 +1,6 @@
 # Metropolitan University Repository
 
-This repository is where all my projects and homeworks for my University are stored.
+This repository is where all my University projects and homeworks are stored.
 
 Made for back-up and presentation purposes.
 
