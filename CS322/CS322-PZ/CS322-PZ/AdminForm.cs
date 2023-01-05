@@ -84,7 +84,6 @@ namespace CS322_PZ
                 product.Name = DSCL[1].Value.ToString();
                 product.Description = DSCL[2].Value.ToString();
                 product.Price = (double)DSCL[3].Value;
-                product.Image = DSCL[4].Value.ToString();
 
                 AddNewProductForm addProductF = new AddNewProductForm();
                 this.Hide();

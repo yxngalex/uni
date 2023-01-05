@@ -62,7 +62,6 @@ namespace CS322_PZ
                 newProd.Name = textBox1.Text;
                 newProd.Description = richTextBox1.Text;
                 newProd.Price = Convert.ToDouble(textBox2.Text);
-                newProd.Image = "default";
                 string query = "UPDATE product SET name = '" + newProd.Name + "', description = '" + newProd.Description + "', price = '" + newProd.Price +
                     "' WHERE id = '" + product.Id + "'";
                 MySqlCommand command = new MySqlCommand(query, conn);
@@ -91,7 +90,6 @@ namespace CS322_PZ
                 newProd.Name = textBox1.Text;
                 newProd.Description = richTextBox1.Text;
                 newProd.Price = Convert.ToDouble(textBox2.Text);
-                newProd.Image = "default";
                 string query = "INSERT INTO product (name, description, price) " +
                     "VALUES ('" + newProd.Name + "', '" + newProd.Description + "', '" + newProd.Price + "');";
                 MySqlCommand command = new MySqlCommand(query, conn);

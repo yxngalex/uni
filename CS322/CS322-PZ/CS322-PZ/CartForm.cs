@@ -35,7 +35,7 @@ namespace CS322_PZ
                 MySqlCommand command = null;
                 MySqlDataReader reader = null;
                 conn.Open();
-                string q = "SELECT p.id, p.name, p.description, p.price, p.image FROM cart AS c INNER JOIN product AS p on c.product = p.id WHERE user = " + userId + ";";
+                string q = "SELECT p.id, p.name, p.description, p.price FROM cart AS c INNER JOIN product AS p on c.product = p.id WHERE user = " + userId + ";";
                 command = new MySqlCommand(q, conn);
                 products = new List<Product>();
                 List<int> productIds = new List<int>();
