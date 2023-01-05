@@ -28,3 +28,5 @@ C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-PZ\CS322-PZ\obj\Debug\net6.0-windows
 C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-PZ\CS322-PZ\obj\Debug\net6.0-windows\CS322_PZ.AddNewProductForm.resources
 C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-PZ\CS322-PZ\obj\Debug\net6.0-windows\CS322_PZ.ShopItem.resources
 C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-PZ\CS322-PZ\obj\Debug\net6.0-windows\CS322_PZ.Properties.Resources.resources
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-PZ\CS322-PZ\obj\Debug\net6.0-windows\CS322_PZ.CartForm.resources
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-PZ\CS322-PZ\obj\Debug\net6.0-windows\CS322_PZ.CartItem.resources

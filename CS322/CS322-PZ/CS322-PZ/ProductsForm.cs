@@ -31,7 +31,6 @@ namespace CS322_PZ
                 MySqlCommand command = null;
                 MySqlDataReader reader = null;
                 conn.Open();
-                adapter = new MySqlDataAdapter();
                 string Query = "SELECT * FROM product";
                 command = new MySqlCommand(Query, conn);
                 List<Product> products = new List<Product>();
@@ -86,6 +85,15 @@ namespace CS322_PZ
         private void shopItem1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CartForm cart = new CartForm();
+            this.Hide();
+            cart.userId = userId;
+            cart.ShowDialog();
+            this.Close();
         }
     }
 }
