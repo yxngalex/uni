@@ -83,7 +83,7 @@ namespace CS322_PZ
                     reader.Close();
 
                     Role role = new Role(roleName);
-                    User user = new User(username, password, role);
+                    User user = new User(userId, username, password, role);
 
                     if (user.Role.Name == "admin")
                     {
@@ -98,8 +98,8 @@ namespace CS322_PZ
                     {
                         // Go to User page
                         ProductsForm productsForm = new ProductsForm();
-                        productsForm.userId = userId;
                         this.Hide();
+                        productsForm.userId = user.Id;
                         productsForm.ShowDialog();
                         this.Close();
                     }

@@ -80,10 +80,11 @@ namespace CS322_PZ
                 DataGridViewSelectedCellCollection DSCL = dataGridView1.SelectedCells;
 
                 Product product = new Product();
-                product.Id = DSCL[0].Value.ToString();
+                product.Id = (int)DSCL[0].Value;
                 product.Name = DSCL[1].Value.ToString();
                 product.Description = DSCL[2].Value.ToString();
                 product.Price = (double)DSCL[3].Value;
+                product.Image = DSCL[4].Value.ToString();
 
                 AddNewProductForm addProductF = new AddNewProductForm();
                 this.Hide();
@@ -100,7 +101,7 @@ namespace CS322_PZ
                 DataGridViewSelectedCellCollection DSCL = dataGridView1.SelectedCells;
 
                 Product product = new Product();
-                product.Id = DSCL[0].Value.ToString();
+                product.Id = (int) DSCL[0].Value;
 
                 string query = "DELETE FROM product WHERE id = " + product.Id ;
                 MySqlCommand command = new MySqlCommand(query, conn);
