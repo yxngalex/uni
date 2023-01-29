@@ -1,0 +1,15 @@
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\bin\Debug\net6.0\Zadatak1.exe
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\bin\Debug\net6.0\Zadatak1.deps.json
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\bin\Debug\net6.0\Zadatak1.runtimeconfig.json
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\bin\Debug\net6.0\Zadatak1.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\bin\Debug\net6.0\Zadatak1.pdb
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\obj\Debug\net6.0\Zadatak1.csproj.AssemblyReference.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\obj\Debug\net6.0\Zadatak1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\obj\Debug\net6.0\Zadatak1.AssemblyInfoInputs.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\obj\Debug\net6.0\Zadatak1.AssemblyInfo.cs
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\obj\Debug\net6.0\Zadatak1.csproj.CoreCompileInputs.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\obj\Debug\net6.0\Zadatak1.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\obj\Debug\net6.0\refint\Zadatak1.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\obj\Debug\net6.0\Zadatak1.pdb
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\obj\Debug\net6.0\Zadatak1.genruntimeconfig.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-Januar\Zadatak1\obj\Debug\net6.0\ref\Zadatak1.dll
