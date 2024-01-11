@@ -4,13 +4,20 @@ This repository is where all my University projects and homeworks are stored.
 
 Made for back-up and presentation purposes.
 
-## Language used:
+## Languages used:
 
 - C/C++
+- C#
 - Java
 - Python
-- C#
-- JS, TS, HTML, CSS
+- JS, TS, HTML, CSS, PHP
+- SQL
+
+## Programs used:
+- PowerDesigner
+- Jetbrains: Webstorm, Intellij, Pycharm, PhpStorm
+- PhpMyAdmin
+- VisualParadigm
 
 ## First year
 
@@ -55,7 +62,7 @@ Made for back-up and presentation purposes.
 
 ### Second semester
 
-1. [**CS374** - Artificial Intellegence](https://github.com/yxngalex/uni/tree/master/CS374)
+1. [**CS374** - Artificial Intelligence](https://github.com/yxngalex/uni/tree/master/CS374)
 2. [**SE325** - Software development project management](https://github.com/yxngalex/uni/tree/master/SE325)
 3. [**IT355** - Web Systems 2](https://github.com/yxngalex/uni/tree/master/IT355)
 4. [**CS323** - C/C++](https://github.com/yxngalex/uni/tree/master/CS323)
@@ -64,8 +71,18 @@ Made for back-up and presentation purposes.
 
 ### First semester
 
-1. [**CS322** - C#]()
-2. [**CS324** - Scripting Languages]()
-3. [**IT381** - Protection and safety of information]()
-4. [**OM350** - Entrepreneurship]()
+1. [**CS322** - C#](https://github.com/yxngalex/uni/tree/fourth-year/CS322)
+2. [**CS324** - Scripting Languages](https://github.com/yxngalex/uni/tree/fourth-year/CS324)
+3. [**IT381** - Protection and safety of information](https://github.com/yxngalex/uni/tree/fourth-year/IT381)
+4. [**OM350** - Entrepreneurship](https://github.com/yxngalex/uni/tree/fourth-year/OM350)
+
+
+### Second semester
+
+1. [**IT390** - Professional ethics](https://github.com/yxngalex/uni/tree/fourth-year/IT390)
+2. [**NT310** - Professional communication](https://github.com/yxngalex/uni/tree/fourth-year/NT310)
+3. [**SE495** - Professional practice](#)
+4. [**SE490** - Thesis](https://github.com/yxngalex/uni/tree/fourth-year/SE490)
+
+
 
