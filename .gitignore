@@ -9,6 +9,7 @@ out
 cmake-build-debug
 dist
 target
+packages/
 
 .idea
 .vscode

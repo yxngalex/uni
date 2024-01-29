@@ -1,0 +1,15 @@
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\bin\Debug\net6.0\CS322-DZ04.exe
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\bin\Debug\net6.0\CS322-DZ04.deps.json
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\bin\Debug\net6.0\CS322-DZ04.runtimeconfig.json
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\bin\Debug\net6.0\CS322-DZ04.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\bin\Debug\net6.0\CS322-DZ04.pdb
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\obj\Debug\net6.0\CS322-DZ04.csproj.AssemblyReference.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\obj\Debug\net6.0\CS322-DZ04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\obj\Debug\net6.0\CS322-DZ04.AssemblyInfoInputs.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\obj\Debug\net6.0\CS322-DZ04.AssemblyInfo.cs
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\obj\Debug\net6.0\CS322-DZ04.csproj.CoreCompileInputs.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\obj\Debug\net6.0\CS322-DZ04.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\obj\Debug\net6.0\refint\CS322-DZ04.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\obj\Debug\net6.0\CS322-DZ04.pdb
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\obj\Debug\net6.0\CS322-DZ04.genruntimeconfig.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ04\CS322-DZ04\obj\Debug\net6.0\ref\CS322-DZ04.dll

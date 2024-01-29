@@ -1,0 +1,17 @@
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\bin\Debug\net6.0-windows\CS322-DZ09.exe
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\bin\Debug\net6.0-windows\CS322-DZ09.deps.json
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\bin\Debug\net6.0-windows\CS322-DZ09.runtimeconfig.json
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\bin\Debug\net6.0-windows\CS322-DZ09.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\bin\Debug\net6.0-windows\CS322-DZ09.pdb
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\CS322-DZ09.csproj.AssemblyReference.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\CS322_DZ09.Form1.resources
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\CS322-DZ09.csproj.GenerateResource.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\CS322-DZ09.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\CS322-DZ09.AssemblyInfoInputs.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\CS322-DZ09.AssemblyInfo.cs
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\CS322-DZ09.csproj.CoreCompileInputs.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\CS322-DZ09.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\refint\CS322-DZ09.dll
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\CS322-DZ09.pdb
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\CS322-DZ09.genruntimeconfig.cache
+C:\Users\Aleksa\Desktop\git\uni\CS322\CS322-DZ09\CS322-DZ09\obj\Debug\net6.0-windows\ref\CS322-DZ09.dll
